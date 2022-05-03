@@ -1,0 +1,98 @@
+{
+    "15533": {
+        "R1": [
+            "../fastqs/15533_TGACCA_L007_R1_001.fastq"
+        ], 
+        "R2": [
+            "../fastqs/15533_TGACCA_L007_R2_001.fastq"
+        ]
+    }, 
+    "16428": {
+        "R1": [
+            "../fastqs/16428_GTCCGC_L005_R1_001.fastq"
+        ], 
+        "R2": [
+            "../fastqs/16428_GTCCGC_L005_R2_001.fastq"
+        ]
+    }, 
+    "16548": {
+        "R1": [
+            "../fastqs/16548_CCGTCC_L007_R1_001.fastq"
+        ], 
+        "R2": [
+            "../fastqs/16548_CCGTCC_L007_R2_001.fastq"
+        ]
+    }, 
+    "16810": {
+        "R1": [
+            "../fastqs/16810_CGATGT_L006_R1_001.fastq"
+        ], 
+        "R2": [
+            "../fastqs/16810_CGATGT_L006_R2_001.fastq"
+        ]
+    }, 
+    "16826": {
+        "R1": [
+            "../fastqs/16826_CGATGT_L008_R1_001.fastq"
+        ], 
+        "R2": [
+            "../fastqs/16826_CGATGT_L008_R2_001.fastq"
+        ]
+    }, 
+    "16840": {
+        "R1": [
+            "../fastqs/16840_CAGATC_L007_R1_001.fastq"
+        ], 
+        "R2": [
+            "../fastqs/16840_CAGATC_L007_R2_001.fastq"
+        ]
+    }, 
+    "16929": {
+        "R1": [
+            "../fastqs/16929_CAGATC_L008_R1_001.fastq"
+        ], 
+        "R2": [
+            "../fastqs/16929_CAGATC_L008_R2_001.fastq"
+        ]
+    }, 
+    "17053": {
+        "R1": [
+            "../fastqs/17053_CAGATC_L001_R1_001.fastq"
+        ], 
+        "R2": [
+            "../fastqs/17053_CAGATC_L001_R2_001.fastq"
+        ]
+    }, 
+    "17068": {
+        "R1": [
+            "../fastqs/17068_ACAGTG_L002_R1_001.fastq"
+        ], 
+        "R2": [
+            "../fastqs/17068_ACAGTG_L002_R2_001.fastq"
+        ]
+    }, 
+    "17071": {
+        "R1": [
+            "../fastqs/17071_CTTGTA_L003_R1_001.fastq"
+        ], 
+        "R2": [
+            "../fastqs/17071_CTTGTA_L003_R2_001.fastq"
+        ]
+    }, 
+    "17109": {
+        "R1": [
+            "../fastqs/17109_CAGATC_L004_R1_001.fastq"
+        ], 
+        "R2": [
+            "../fastqs/17109_CAGATC_L004_R2_001.fastq"
+        ]
+    }, 
+    "17921": {
+        "R1": [
+            "../fastqs/17921_CGATGT_L006_R1_001.fastq"
+        ], 
+        "R2": [
+            "../fastqs/17921_CGATGT_L006_R2_001.fastq"
+        ]
+    }
+}

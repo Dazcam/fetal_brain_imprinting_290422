@@ -1,0 +1,758 @@
+{
+    "1117_Crdf": {
+        "R1": [
+            "test/1117_Crdf_L5_R1.fastq.gz",
+            "test/1117_Crdf_L6_R1.fastq.gz",
+            "test/1117_Crdf_L7_R1.fastq.gz",
+            "test/1117_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/1117_Crdf_L5_R2.fastq.gz",
+            "test/1117_Crdf_L6_R2.fastq.gz",
+            "test/1117_Crdf_L7_R2.fastq.gz",
+            "test/1117_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11396_Crdf": {
+        "R1": [
+            "test/11396_Crdf_L3_R1.fastq.gz",
+            "test/11396_Crdf_L4_R1.fastq.gz",
+            "test/11396_Crdf_L5_R1.fastq.gz",
+            "test/11396_Crdf_L6_R1.fastq.gz",
+            "test/11396_Crdf_L7_R1.fastq.gz",
+            "test/11396_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11396_Crdf_L3_R2.fastq.gz",
+            "test/11396_Crdf_L4_R2.fastq.gz",
+            "test/11396_Crdf_L5_R2.fastq.gz",
+            "test/11396_Crdf_L6_R2.fastq.gz",
+            "test/11396_Crdf_L7_R2.fastq.gz",
+            "test/11396_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11511_Crdf": {
+        "R1": [
+            "test/11511_Crdf_L3_R1.fastq.gz",
+            "test/11511_Crdf_L4_R1.fastq.gz",
+            "test/11511_Crdf_L5_R1.fastq.gz",
+            "test/11511_Crdf_L6_R1.fastq.gz",
+            "test/11511_Crdf_L7_R1.fastq.gz",
+            "test/11511_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11511_Crdf_L3_R2.fastq.gz",
+            "test/11511_Crdf_L4_R2.fastq.gz",
+            "test/11511_Crdf_L5_R2.fastq.gz",
+            "test/11511_Crdf_L6_R2.fastq.gz",
+            "test/11511_Crdf_L7_R2.fastq.gz",
+            "test/11511_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11654_Crdf": {
+        "R1": [
+            "test/11654_Crdf_L3_R1.fastq.gz",
+            "test/11654_Crdf_L4_R1.fastq.gz",
+            "test/11654_Crdf_L5_R1.fastq.gz",
+            "test/11654_Crdf_L6_R1.fastq.gz",
+            "test/11654_Crdf_L7_R1.fastq.gz",
+            "test/11654_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11654_Crdf_L3_R2.fastq.gz",
+            "test/11654_Crdf_L4_R2.fastq.gz",
+            "test/11654_Crdf_L5_R2.fastq.gz",
+            "test/11654_Crdf_L6_R2.fastq.gz",
+            "test/11654_Crdf_L7_R2.fastq.gz",
+            "test/11654_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11834_Crdf": {
+        "R1": [
+            "test/11834_Crdf_L3_R1.fastq.gz",
+            "test/11834_Crdf_L4_R1.fastq.gz",
+            "test/11834_Crdf_L5_R1.fastq.gz",
+            "test/11834_Crdf_L6_R1.fastq.gz",
+            "test/11834_Crdf_L7_R1.fastq.gz",
+            "test/11834_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11834_Crdf_L3_R2.fastq.gz",
+            "test/11834_Crdf_L4_R2.fastq.gz",
+            "test/11834_Crdf_L5_R2.fastq.gz",
+            "test/11834_Crdf_L6_R2.fastq.gz",
+            "test/11834_Crdf_L7_R2.fastq.gz",
+            "test/11834_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11844_Crdf": {
+        "R1": [
+            "test/11844_Crdf_L5_R1.fastq.gz",
+            "test/11844_Crdf_L6_R1.fastq.gz",
+            "test/11844_Crdf_L7_R1.fastq.gz",
+            "test/11844_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11844_Crdf_L5_R2.fastq.gz",
+            "test/11844_Crdf_L6_R2.fastq.gz",
+            "test/11844_Crdf_L7_R2.fastq.gz",
+            "test/11844_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11875_Crdf": {
+        "R1": [
+            "test/11875_Crdf_L6_R1.fastq.gz",
+            "test/11875_Crdf_L7_R1.fastq.gz",
+            "test/11875_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11875_Crdf_L6_R2.fastq.gz",
+            "test/11875_Crdf_L7_R2.fastq.gz",
+            "test/11875_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11885_Crdf": {
+        "R1": [
+            "test/11885_Crdf_L3_R1.fastq.gz",
+            "test/11885_Crdf_L4_R1.fastq.gz",
+            "test/11885_Crdf_L5_R1.fastq.gz",
+            "test/11885_Crdf_L6_R1.fastq.gz",
+            "test/11885_Crdf_L7_R1.fastq.gz",
+            "test/11885_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11885_Crdf_L3_R2.fastq.gz",
+            "test/11885_Crdf_L4_R2.fastq.gz",
+            "test/11885_Crdf_L5_R2.fastq.gz",
+            "test/11885_Crdf_L6_R2.fastq.gz",
+            "test/11885_Crdf_L7_R2.fastq.gz",
+            "test/11885_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11892_Crdf": {
+        "R1": [
+            "test/11892_Crdf_L5_R1.fastq.gz",
+            "test/11892_Crdf_L6_R1.fastq.gz",
+            "test/11892_Crdf_L7_R1.fastq.gz",
+            "test/11892_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11892_Crdf_L5_R2.fastq.gz",
+            "test/11892_Crdf_L6_R2.fastq.gz",
+            "test/11892_Crdf_L7_R2.fastq.gz",
+            "test/11892_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11900_Crdf": {
+        "R1": [
+            "test/11900_Crdf_L5_R1.fastq.gz",
+            "test/11900_Crdf_L6_R1.fastq.gz",
+            "test/11900_Crdf_L7_R1.fastq.gz",
+            "test/11900_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11900_Crdf_L5_R2.fastq.gz",
+            "test/11900_Crdf_L6_R2.fastq.gz",
+            "test/11900_Crdf_L7_R2.fastq.gz",
+            "test/11900_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11907_Crdf": {
+        "R1": [
+            "test/11907_Crdf_L5_R1.fastq.gz",
+            "test/11907_Crdf_L6_R1.fastq.gz",
+            "test/11907_Crdf_L7_R1.fastq.gz",
+            "test/11907_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11907_Crdf_L5_R2.fastq.gz",
+            "test/11907_Crdf_L6_R2.fastq.gz",
+            "test/11907_Crdf_L7_R2.fastq.gz",
+            "test/11907_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11921_Crdf": {
+        "R1": [
+            "test/11921_Crdf_L3_R1.fastq.gz",
+            "test/11921_Crdf_L4_R1.fastq.gz",
+            "test/11921_Crdf_L5_R1.fastq.gz",
+            "test/11921_Crdf_L6_R1.fastq.gz",
+            "test/11921_Crdf_L7_R1.fastq.gz",
+            "test/11921_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11921_Crdf_L3_R2.fastq.gz",
+            "test/11921_Crdf_L4_R2.fastq.gz",
+            "test/11921_Crdf_L5_R2.fastq.gz",
+            "test/11921_Crdf_L6_R2.fastq.gz",
+            "test/11921_Crdf_L7_R2.fastq.gz",
+            "test/11921_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11928_Crdf": {
+        "R1": [
+            "test/11928_Crdf_L3_R1.fastq.gz",
+            "test/11928_Crdf_L4_R1.fastq.gz",
+            "test/11928_Crdf_L5_R1.fastq.gz",
+            "test/11928_Crdf_L6_R1.fastq.gz",
+            "test/11928_Crdf_L7_R1.fastq.gz",
+            "test/11928_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11928_Crdf_L3_R2.fastq.gz",
+            "test/11928_Crdf_L4_R2.fastq.gz",
+            "test/11928_Crdf_L5_R2.fastq.gz",
+            "test/11928_Crdf_L6_R2.fastq.gz",
+            "test/11928_Crdf_L7_R2.fastq.gz",
+            "test/11928_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11952_Crdf": {
+        "R1": [
+            "test/11952_Crdf_L5_R1.fastq.gz",
+            "test/11952_Crdf_L6_R1.fastq.gz",
+            "test/11952_Crdf_L7_R1.fastq.gz",
+            "test/11952_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11952_Crdf_L5_R2.fastq.gz",
+            "test/11952_Crdf_L6_R2.fastq.gz",
+            "test/11952_Crdf_L7_R2.fastq.gz",
+            "test/11952_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11971_Crdf": {
+        "R1": [
+            "test/11971_Crdf_L3_R1.fastq.gz",
+            "test/11971_Crdf_L4_R1.fastq.gz",
+            "test/11971_Crdf_L5_R1.fastq.gz",
+            "test/11971_Crdf_L6_R1.fastq.gz",
+            "test/11971_Crdf_L7_R1.fastq.gz",
+            "test/11971_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/11971_Crdf_L3_R2.fastq.gz",
+            "test/11971_Crdf_L4_R2.fastq.gz",
+            "test/11971_Crdf_L5_R2.fastq.gz",
+            "test/11971_Crdf_L6_R2.fastq.gz",
+            "test/11971_Crdf_L7_R2.fastq.gz",
+            "test/11971_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12107_Crdf": {
+        "R1": [
+            "test/12107_Crdf_L6_R1.fastq.gz",
+            "test/12107_Crdf_L7_R1.fastq.gz",
+            "test/12107_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/12107_Crdf_L6_R2.fastq.gz",
+            "test/12107_Crdf_L7_R2.fastq.gz",
+            "test/12107_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12116_Crdf": {
+        "R1": [
+            "test/12116_Crdf_L3_R1.fastq.gz",
+            "test/12116_Crdf_L4_R1.fastq.gz",
+            "test/12116_Crdf_L5_R1.fastq.gz",
+            "test/12116_Crdf_L6_R1.fastq.gz",
+            "test/12116_Crdf_L7_R1.fastq.gz",
+            "test/12116_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/12116_Crdf_L3_R2.fastq.gz",
+            "test/12116_Crdf_L4_R2.fastq.gz",
+            "test/12116_Crdf_L5_R2.fastq.gz",
+            "test/12116_Crdf_L6_R2.fastq.gz",
+            "test/12116_Crdf_L7_R2.fastq.gz",
+            "test/12116_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12134_Crdf": {
+        "R1": [
+            "test/12134_Crdf_L3_R1.fastq.gz",
+            "test/12134_Crdf_L4_R1.fastq.gz",
+            "test/12134_Crdf_L5_R1.fastq.gz",
+            "test/12134_Crdf_L6_R1.fastq.gz",
+            "test/12134_Crdf_L7_R1.fastq.gz",
+            "test/12134_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/12134_Crdf_L3_R2.fastq.gz",
+            "test/12134_Crdf_L4_R2.fastq.gz",
+            "test/12134_Crdf_L5_R2.fastq.gz",
+            "test/12134_Crdf_L6_R2.fastq.gz",
+            "test/12134_Crdf_L7_R2.fastq.gz",
+            "test/12134_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12152_Crdf": {
+        "R1": [
+            "test/12152_Crdf_L5_R1.fastq.gz",
+            "test/12152_Crdf_L6_R1.fastq.gz",
+            "test/12152_Crdf_L7_R1.fastq.gz",
+            "test/12152_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/12152_Crdf_L5_R2.fastq.gz",
+            "test/12152_Crdf_L6_R2.fastq.gz",
+            "test/12152_Crdf_L7_R2.fastq.gz",
+            "test/12152_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12153_Crdf": {
+        "R1": [
+            "test/12153_Crdf_L3_R1.fastq.gz",
+            "test/12153_Crdf_L4_R1.fastq.gz",
+            "test/12153_Crdf_L5_R1.fastq.gz",
+            "test/12153_Crdf_L6_R1.fastq.gz",
+            "test/12153_Crdf_L7_R1.fastq.gz",
+            "test/12153_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/12153_Crdf_L3_R2.fastq.gz",
+            "test/12153_Crdf_L4_R2.fastq.gz",
+            "test/12153_Crdf_L5_R2.fastq.gz",
+            "test/12153_Crdf_L6_R2.fastq.gz",
+            "test/12153_Crdf_L7_R2.fastq.gz",
+            "test/12153_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12545_Crdf": {
+        "R1": [
+            "test/12545_Crdf_L6_R1.fastq.gz",
+            "test/12545_Crdf_L7_R1.fastq.gz",
+            "test/12545_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/12545_Crdf_L6_R2.fastq.gz",
+            "test/12545_Crdf_L7_R2.fastq.gz",
+            "test/12545_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12546_Crdf": {
+        "R1": [
+            "test/12546_Crdf_L6_R1.fastq.gz",
+            "test/12546_Crdf_L7_R1.fastq.gz",
+            "test/12546_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/12546_Crdf_L6_R2.fastq.gz",
+            "test/12546_Crdf_L7_R2.fastq.gz",
+            "test/12546_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12680_Crdf": {
+        "R1": [
+            "test/12680_Crdf_L5_R1.fastq.gz",
+            "test/12680_Crdf_L6_R1.fastq.gz",
+            "test/12680_Crdf_L7_R1.fastq.gz",
+            "test/12680_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/12680_Crdf_L5_R2.fastq.gz",
+            "test/12680_Crdf_L6_R2.fastq.gz",
+            "test/12680_Crdf_L7_R2.fastq.gz",
+            "test/12680_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12972_Crdf": {
+        "R1": [
+            "test/12972_Crdf_L5_R1.fastq.gz",
+            "test/12972_Crdf_L6_R1.fastq.gz",
+            "test/12972_Crdf_L7_R1.fastq.gz",
+            "test/12972_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/12972_Crdf_L5_R2.fastq.gz",
+            "test/12972_Crdf_L6_R2.fastq.gz",
+            "test/12972_Crdf_L7_R2.fastq.gz",
+            "test/12972_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12993_Crdf": {
+        "R1": [
+            "test/12993_Crdf_L6_R1.fastq.gz",
+            "test/12993_Crdf_L7_R1.fastq.gz",
+            "test/12993_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/12993_Crdf_L6_R2.fastq.gz",
+            "test/12993_Crdf_L7_R2.fastq.gz",
+            "test/12993_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12994_Crdf": {
+        "R1": [
+            "test/12994_Crdf_L6_R1.fastq.gz",
+            "test/12994_Crdf_L7_R1.fastq.gz",
+            "test/12994_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/12994_Crdf_L6_R2.fastq.gz",
+            "test/12994_Crdf_L7_R2.fastq.gz",
+            "test/12994_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "13117_Crdf": {
+        "R1": [
+            "test/13117_Crdf_L3_R1.fastq.gz",
+            "test/13117_Crdf_L4_R1.fastq.gz",
+            "test/13117_Crdf_L5_R1.fastq.gz",
+            "test/13117_Crdf_L6_R1.fastq.gz",
+            "test/13117_Crdf_L7_R1.fastq.gz",
+            "test/13117_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/13117_Crdf_L3_R2.fastq.gz",
+            "test/13117_Crdf_L4_R2.fastq.gz",
+            "test/13117_Crdf_L5_R2.fastq.gz",
+            "test/13117_Crdf_L6_R2.fastq.gz",
+            "test/13117_Crdf_L7_R2.fastq.gz",
+            "test/13117_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "13142_Crdf": {
+        "R1": [
+            "test/13142_Crdf_L6_R1.fastq.gz",
+            "test/13142_Crdf_L7_R1.fastq.gz",
+            "test/13142_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/13142_Crdf_L6_R2.fastq.gz",
+            "test/13142_Crdf_L7_R2.fastq.gz",
+            "test/13142_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "13144_Crdf": {
+        "R1": [
+            "test/13144_Crdf_L3_R1.fastq.gz",
+            "test/13144_Crdf_L4_R1.fastq.gz",
+            "test/13144_Crdf_L5_R1.fastq.gz",
+            "test/13144_Crdf_L6_R1.fastq.gz",
+            "test/13144_Crdf_L7_R1.fastq.gz",
+            "test/13144_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/13144_Crdf_L3_R2.fastq.gz",
+            "test/13144_Crdf_L4_R2.fastq.gz",
+            "test/13144_Crdf_L5_R2.fastq.gz",
+            "test/13144_Crdf_L6_R2.fastq.gz",
+            "test/13144_Crdf_L7_R2.fastq.gz",
+            "test/13144_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "15296_Crdf": {
+        "R1": [
+            "test/15296_Crdf_L7_R1.fastq.gz",
+            "test/15296_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/15296_Crdf_L7_R2.fastq.gz",
+            "test/15296_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "15329_Crdf": {
+        "R1": [
+            "test/15329_Crdf_L7_R1.fastq.gz",
+            "test/15329_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/15329_Crdf_L7_R2.fastq.gz",
+            "test/15329_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "16117_Crdf": {
+        "R1": [
+            "test/16117_Crdf_L7_R1.fastq.gz",
+            "test/16117_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/16117_Crdf_L7_R2.fastq.gz",
+            "test/16117_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "16483_Crdf": {
+        "R1": [
+            "test/16483_Crdf_L7_R1.fastq.gz",
+            "test/16483_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/16483_Crdf_L7_R2.fastq.gz",
+            "test/16483_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "16859_Crdf": {
+        "R1": [
+            "test/16859_Crdf_L7_R1.fastq.gz",
+            "test/16859_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/16859_Crdf_L7_R2.fastq.gz",
+            "test/16859_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "17054_Edin": {
+        "R1": [
+            "test/17054_Edin_L1_R1.fastq.gz",
+            "test/17054_Edin_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17054_Edin_L1_R2.fastq.gz",
+            "test/17054_Edin_L6_R2.fastq.gz"
+        ]
+    },
+    "17111_Crdf": {
+        "R1": [
+            "test/17111_Crdf_L1_R1.fastq.gz",
+            "test/17111_Crdf_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17111_Crdf_L1_R2.fastq.gz",
+            "test/17111_Crdf_L2_R2.fastq.gz"
+        ]
+    },
+    "17162_Crdf": {
+        "R1": [
+            "test/17162_Crdf_L7_R1.fastq.gz",
+            "test/17162_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17162_Crdf_L7_R2.fastq.gz",
+            "test/17162_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "17193_Crdf": {
+        "R1": [
+            "test/17193_Crdf_L3_R1.fastq.gz",
+            "test/17193_Crdf_L4_R1.fastq.gz",
+            "test/17193_Crdf_L5_R1.fastq.gz",
+            "test/17193_Crdf_L6_R1.fastq.gz",
+            "test/17193_Crdf_L7_R1.fastq.gz",
+            "test/17193_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17193_Crdf_L3_R2.fastq.gz",
+            "test/17193_Crdf_L4_R2.fastq.gz",
+            "test/17193_Crdf_L5_R2.fastq.gz",
+            "test/17193_Crdf_L6_R2.fastq.gz",
+            "test/17193_Crdf_L7_R2.fastq.gz",
+            "test/17193_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "17221_Crdf": {
+        "R1": [
+            "test/17221_Crdf_L3_R1.fastq.gz",
+            "test/17221_Crdf_L7_R1.fastq.gz",
+            "test/17221_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17221_Crdf_L3_R2.fastq.gz",
+            "test/17221_Crdf_L7_R2.fastq.gz",
+            "test/17221_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "17264_Crdf": {
+        "R1": [
+            "test/17264_Crdf_L3_R1.fastq.gz",
+            "test/17264_Crdf_L5_R1.fastq.gz",
+            "test/17264_Crdf_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17264_Crdf_L3_R2.fastq.gz",
+            "test/17264_Crdf_L5_R2.fastq.gz",
+            "test/17264_Crdf_L6_R2.fastq.gz"
+        ]
+    },
+    "17372_Crdf": {
+        "R1": [
+            "test/17372_Crdf_L7_R1.fastq.gz",
+            "test/17372_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17372_Crdf_L7_R2.fastq.gz",
+            "test/17372_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "17486_Crdf": {
+        "R1": [
+            "test/17486_Crdf_L5_R1.fastq.gz",
+            "test/17486_Crdf_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17486_Crdf_L5_R2.fastq.gz",
+            "test/17486_Crdf_L6_R2.fastq.gz"
+        ]
+    },
+    "17521_Crdf": {
+        "R1": [
+            "test/17521_Crdf_L3_R1.fastq.gz",
+            "test/17521_Crdf_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17521_Crdf_L3_R2.fastq.gz",
+            "test/17521_Crdf_L4_R2.fastq.gz"
+        ]
+    },
+    "17666_Crdf": {
+        "R1": [
+            "test/17666_Crdf_L5_R1.fastq.gz",
+            "test/17666_Crdf_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17666_Crdf_L5_R2.fastq.gz",
+            "test/17666_Crdf_L6_R2.fastq.gz"
+        ]
+    },
+    "17753_Crdf": {
+        "R1": [
+            "test/17753_Crdf_L3_R1.fastq.gz",
+            "test/17753_Crdf_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17753_Crdf_L3_R2.fastq.gz",
+            "test/17753_Crdf_L4_R2.fastq.gz"
+        ]
+    },
+    "17754_Crdf": {
+        "R1": [
+            "test/17754_Crdf_L3_R1.fastq.gz",
+            "test/17754_Crdf_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17754_Crdf_L3_R2.fastq.gz",
+            "test/17754_Crdf_L4_R2.fastq.gz"
+        ]
+    },
+    "17932_Crdf": {
+        "R1": [
+            "test/17932_Crdf_L1_R1.fastq.gz",
+            "test/17932_Crdf_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/17932_Crdf_L1_R2.fastq.gz",
+            "test/17932_Crdf_L2_R2.fastq.gz"
+        ]
+    },
+    "18015_Crdf": {
+        "R1": [
+            "test/18015_Crdf_L1_R1.fastq.gz",
+            "test/18015_Crdf_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/18015_Crdf_L1_R2.fastq.gz",
+            "test/18015_Crdf_L2_R2.fastq.gz"
+        ]
+    },
+    "18139_Crdf": {
+        "R1": [
+            "test/18139_Crdf_L3_R1.fastq.gz",
+            "test/18139_Crdf_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/18139_Crdf_L3_R2.fastq.gz",
+            "test/18139_Crdf_L4_R2.fastq.gz"
+        ]
+    },
+    "18153_Edin": {
+        "R1": [
+            "test/18153_Edin_L1_R1.fastq.gz",
+            "test/18153_Edin_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/18153_Edin_L1_R2.fastq.gz",
+            "test/18153_Edin_L6_R2.fastq.gz"
+        ]
+    },
+    "18382_Crdf": {
+        "R1": [
+            "test/18382_Crdf_L1_R1.fastq.gz",
+            "test/18382_Crdf_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/18382_Crdf_L1_R2.fastq.gz",
+            "test/18382_Crdf_L2_R2.fastq.gz"
+        ]
+    },
+    "18528_Crdf": {
+        "R1": [
+            "test/18528_Crdf_L1_R1.fastq.gz",
+            "test/18528_Crdf_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/18528_Crdf_L1_R2.fastq.gz",
+            "test/18528_Crdf_L2_R2.fastq.gz"
+        ]
+    },
+    "18529_Crdf": {
+        "R1": [
+            "test/18529_Crdf_L5_R1.fastq.gz",
+            "test/18529_Crdf_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/18529_Crdf_L5_R2.fastq.gz",
+            "test/18529_Crdf_L6_R2.fastq.gz"
+        ]
+    },
+    "18540_Crdf": {
+        "R1": [
+            "test/18540_Crdf_L3_R1.fastq.gz",
+            "test/18540_Crdf_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/18540_Crdf_L3_R2.fastq.gz",
+            "test/18540_Crdf_L4_R2.fastq.gz"
+        ]
+    },
+    "18611_Crdf": {
+        "R1": [
+            "test/18611_Crdf_L7_R1.fastq.gz",
+            "test/18611_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/18611_Crdf_L7_R2.fastq.gz",
+            "test/18611_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "18653_Crdf": {
+        "R1": [
+            "test/18653_Crdf_L7_R1.fastq.gz",
+            "test/18653_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/18653_Crdf_L7_R2.fastq.gz",
+            "test/18653_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "18655_Crdf": {
+        "R1": [
+            "test/18655_Crdf_L7_R1.fastq.gz",
+            "test/18655_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/18655_Crdf_L7_R2.fastq.gz",
+            "test/18655_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "18856_Crdf": {
+        "R1": [
+            "test/18856_Crdf_L7_R1.fastq.gz",
+            "test/18856_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/18856_Crdf_L7_R2.fastq.gz",
+            "test/18856_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "19031_Crdf": {
+        "R1": [
+            "test/19031_Crdf_L5_R1.fastq.gz",
+            "test/19031_Crdf_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "test/19031_Crdf_L5_R2.fastq.gz",
+            "test/19031_Crdf_L6_R2.fastq.gz"
+        ]
+    }
+}

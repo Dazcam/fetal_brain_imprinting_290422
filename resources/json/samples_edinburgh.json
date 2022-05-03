@@ -1,0 +1,394 @@
+{
+    "15240": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/15240_150429_D00200_0258_BC6UARANXX_4_IL-TP-019_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/15240_150429_D00200_0258_BC6UARANXX_4_IL-TP-019_2.fastq.gz"
+        ]
+    },
+    "15468": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/15468_150609_D00200_0263_BC7187ANXX_2_IL-TP-015_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/15468_150609_D00200_0263_BC7187ANXX_2_IL-TP-015_2.fastq.gz"
+        ]
+    },
+    "15655": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/15655_150610_D00125_0239_BC718AANXX_5_IL-TP-013_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/15655_150610_D00125_0239_BC718AANXX_5_IL-TP-013_2.fastq.gz"
+        ]
+    },
+    "15768": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/15768_150609_D00200_0263_BC7187ANXX_5_IL-TP-016_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/15768_150609_D00200_0263_BC7187ANXX_5_IL-TP-016_2.fastq.gz"
+        ]
+    },
+    "16286": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/16286_150505_D00261_0240_AC6T4NANXX_3_IL-TP-002_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/16286_150505_D00261_0240_AC6T4NANXX_3_IL-TP-002_2.fastq.gz"
+        ]
+    },
+    "16488": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/16488_150505_D00261_0240_AC6T4NANXX_5_IL-TP-006_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/16488_150505_D00261_0240_AC6T4NANXX_5_IL-TP-006_2.fastq.gz"
+        ]
+    },
+    "16640": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/16640_150609_D00200_0263_BC7187ANXX_4_IL-TP-005_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/16640_150609_D00200_0263_BC7187ANXX_4_IL-TP-005_2.fastq.gz"
+        ]
+    },
+    "16649": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/16649_150505_D00261_0240_AC6T4NANXX_6_IL-TP-014_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/16649_150505_D00261_0240_AC6T4NANXX_6_IL-TP-014_2.fastq.gz"
+        ]
+    },
+    "17013": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17013_150610_D00125_0239_BC718AANXX_3_IL-TP-012_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17013_150610_D00125_0239_BC718AANXX_3_IL-TP-012_2.fastq.gz"
+        ]
+    },
+    "17049": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17049_150616_D00125_0240_AC6U54ANXX_3_IL-TP-018_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17049_150616_D00125_0240_AC6U54ANXX_3_IL-TP-018_2.fastq.gz"
+        ]
+    },
+    "17072": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17072_150429_D00200_0258_BC6UARANXX_4_IL-TP-004_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17072_150429_D00200_0258_BC6UARANXX_4_IL-TP-004_2.fastq.gz"
+        ]
+    },
+    "17081": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17081_150505_D00125_0236_AC6UD3ANXX_2_IL-TP-005_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17081_150505_D00125_0236_AC6UD3ANXX_2_IL-TP-005_2.fastq.gz"
+        ]
+    },
+    "17087": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17087_150610_D00125_0239_BC718AANXX_4_IL-TP-006_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17087_150610_D00125_0239_BC718AANXX_4_IL-TP-006_2.fastq.gz"
+        ]
+    },
+    "17115": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17115_150609_D00200_0263_BC7187ANXX_1_IL-TP-012_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17115_150609_D00200_0263_BC7187ANXX_1_IL-TP-012_2.fastq.gz"
+        ]
+    },
+    "17130": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17130_150505_D00125_0236_AC6UD3ANXX_3_IL-TP-013_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17130_150505_D00125_0236_AC6UD3ANXX_3_IL-TP-013_2.fastq.gz"
+        ]
+    },
+    "17160": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17160_150505_D00125_0236_AC6UD3ANXX_2_IL-TP-014_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17160_150505_D00125_0236_AC6UD3ANXX_2_IL-TP-014_2.fastq.gz"
+        ]
+    },
+    "17167": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17167_150505_D00125_0236_AC6UD3ANXX_4_IL-TP-015_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17167_150505_D00125_0236_AC6UD3ANXX_4_IL-TP-015_2.fastq.gz"
+        ]
+    },
+    "17175": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17175_150505_D00125_0236_AC6UD3ANXX_5_IL-TP-016_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17175_150505_D00125_0236_AC6UD3ANXX_5_IL-TP-016_2.fastq.gz"
+        ]
+    },
+    "17229": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17229_150610_D00125_0239_BC718AANXX_6_IL-TP-002_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17229_150610_D00125_0239_BC718AANXX_6_IL-TP-002_2.fastq.gz"
+        ]
+    },
+    "17333": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17333_150610_D00125_0239_BC718AANXX_2_IL-TP-004_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17333_150610_D00125_0239_BC718AANXX_2_IL-TP-004_2.fastq.gz"
+        ]
+    },
+    "17369": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17369_150505_D00125_0236_AC6UD3ANXX_5_IL-TP-005_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17369_150505_D00125_0236_AC6UD3ANXX_5_IL-TP-005_2.fastq.gz"
+        ]
+    },
+    "17475": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17475_150610_D00125_0239_BC718AANXX_4_IL-TP-015_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17475_150610_D00125_0239_BC718AANXX_4_IL-TP-015_2.fastq.gz"
+        ]
+    },
+    "17543": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17543_150616_D00125_0240_AC6U54ANXX_3_IL-TP-005_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17543_150616_D00125_0240_AC6U54ANXX_3_IL-TP-005_2.fastq.gz"
+        ]
+    },
+    "17629": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17629_150610_D00125_0239_BC718AANXX_2_IL-TP-006_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17629_150610_D00125_0239_BC718AANXX_2_IL-TP-006_2.fastq.gz"
+        ]
+    },
+    "17671": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17671_150505_D00261_0240_AC6T4NANXX_6_IL-TP-016_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17671_150505_D00261_0240_AC6T4NANXX_6_IL-TP-016_2.fastq.gz"
+        ]
+    },
+    "17701": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17701_150609_D00200_0263_BC7187ANXX_5_IL-TP-014_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17701_150609_D00200_0263_BC7187ANXX_5_IL-TP-014_2.fastq.gz"
+        ]
+    },
+    "17812": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17812_150610_D00125_0239_BC718AANXX_6_IL-TP-004_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17812_150610_D00125_0239_BC718AANXX_6_IL-TP-004_2.fastq.gz"
+        ]
+    },
+    "17835": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17835_150609_D00200_0263_BC7187ANXX_1_IL-TP-006_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17835_150609_D00200_0263_BC7187ANXX_1_IL-TP-006_2.fastq.gz"
+        ]
+    },
+    "17922": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17922_150505_D00125_0236_AC6UD3ANXX_4_IL-TP-007_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17922_150505_D00125_0236_AC6UD3ANXX_4_IL-TP-007_2.fastq.gz"
+        ]
+    },
+    "17923": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/17923_150505_D00125_0236_AC6UD3ANXX_6_IL-TP-012_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/17923_150505_D00125_0236_AC6UD3ANXX_6_IL-TP-012_2.fastq.gz"
+        ]
+    },
+    "18055": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18055_150505_D00125_0236_AC6UD3ANXX_6_IL-TP-015_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18055_150505_D00125_0236_AC6UD3ANXX_6_IL-TP-015_2.fastq.gz"
+        ]
+    },
+    "18134": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18134_150505_D00125_0236_AC6UD3ANXX_7_IL-TP-018_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18134_150505_D00125_0236_AC6UD3ANXX_7_IL-TP-018_2.fastq.gz"
+        ]
+    },
+    "18208": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18208_150505_D00125_0236_AC6UD3ANXX_7_IL-TP-016_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18208_150505_D00125_0236_AC6UD3ANXX_7_IL-TP-016_2.fastq.gz"
+        ]
+    },
+    "18241": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18241_150505_D00261_0240_AC6T4NANXX_5_IL-TP-002_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18241_150505_D00261_0240_AC6T4NANXX_5_IL-TP-002_2.fastq.gz"
+        ]
+    },
+    "18249": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18249_150609_D00200_0263_BC7187ANXX_2_IL-TP-012_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18249_150609_D00200_0263_BC7187ANXX_2_IL-TP-012_2.fastq.gz"
+        ]
+    },
+    "18266": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18266_150505_D00125_0236_AC6UD3ANXX_8_IL-TP-004_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18266_150505_D00125_0236_AC6UD3ANXX_8_IL-TP-004_2.fastq.gz"
+        ]
+    },
+    "18282": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18282_150429_D00200_0258_BC6UARANXX_5_IL-TP-013_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18282_150429_D00200_0258_BC6UARANXX_5_IL-TP-013_2.fastq.gz"
+        ]
+    },
+    "18294": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18294_150505_D00261_0240_AC6T4NANXX_7_IL-TP-014_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18294_150505_D00261_0240_AC6T4NANXX_7_IL-TP-014_2.fastq.gz"
+        ]
+    },
+    "18349": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18349_150610_D00125_0239_BC718AANXX_5_IL-TP-005_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18349_150610_D00125_0239_BC718AANXX_5_IL-TP-005_2.fastq.gz"
+        ]
+    },
+    "18355": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18355_150505_D00125_0236_AC6UD3ANXX_8_IL-TP-014_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18355_150505_D00125_0236_AC6UD3ANXX_8_IL-TP-014_2.fastq.gz"
+        ]
+    },
+    "18372": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18372_150609_D00200_0263_BC7187ANXX_7_IL-TP-015_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18372_150609_D00200_0263_BC7187ANXX_7_IL-TP-015_2.fastq.gz"
+        ]
+    },
+    "18559": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18559_150505_D00125_0236_AC6UD3ANXX_3_IL-TP-007_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18559_150505_D00125_0236_AC6UD3ANXX_3_IL-TP-007_2.fastq.gz"
+        ]
+    },
+    "18596": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18596_150429_D00200_0258_BC6UARANXX_5_IL-TP-012_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18596_150429_D00200_0258_BC6UARANXX_5_IL-TP-012_2.fastq.gz"
+        ]
+    },
+    "18666": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18666_150609_D00200_0263_BC7187ANXX_3_IL-TP-012_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18666_150609_D00200_0263_BC7187ANXX_3_IL-TP-012_2.fastq.gz"
+        ]
+    },
+    "18687": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18687_150610_D00125_0239_BC718AANXX_7_IL-TP-019_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18687_150610_D00125_0239_BC718AANXX_7_IL-TP-019_2.fastq.gz"
+        ]
+    },
+    "18694": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18694_150505_D00261_0240_AC6T4NANXX_4_IL-TP-005_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18694_150505_D00261_0240_AC6T4NANXX_4_IL-TP-005_2.fastq.gz"
+        ]
+    },
+    "18983": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/18983_150616_D00125_0240_AC6U54ANXX_8_IL-TP-006_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/18983_150616_D00125_0240_AC6U54ANXX_8_IL-TP-006_2.fastq.gz"
+        ]
+    },
+    "19043": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/19043_150609_D00200_0263_BC7187ANXX_4_IL-TP-013_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/19043_150609_D00200_0263_BC7187ANXX_4_IL-TP-013_2.fastq.gz"
+        ]
+    },
+    "19052": {
+        "1": [
+            "/scratch/c.c1477909/fastqs/19052_150610_D00125_0239_BC718AANXX_7_IL-TP-014_1.fastq.gz"
+        ],
+        "2": [
+            "/scratch/c.c1477909/fastqs/19052_150610_D00125_0239_BC718AANXX_7_IL-TP-014_2.fastq.gz"
+        ]
+    }
+}
