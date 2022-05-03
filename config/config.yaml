@@ -1,1 +1,2 @@
 sample_list: '../config/all_samples_nameKey'
+MERGE_FILES_JSON: '../config/samples_merge.json'

@@ -14,3 +14,6 @@ which had multiple different number of input files for each run of merge fastq. 
 occured on the output of the zip_fastqs rule. However, at the time I couldn't work out a way to integrate the 
 json generation step into the snakemake workflow. For now the json scripts and data are stored in resources/json/.  
 
+
+ISSUES: Discrepency between zip_fastqs and merge_fastqs rule caused by absolute path being in json files and 
+relative path being in snake rules. Jobs appear to work now. 

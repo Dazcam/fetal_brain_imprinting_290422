@@ -1,0 +1,1248 @@
+{
+    "1117_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/1117_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/1117_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/1117_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/1117_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/1117_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/1117_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/1117_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/1117_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11396_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11396_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11396_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11396_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11396_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11396_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11396_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11396_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11396_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11396_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11396_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11396_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11396_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11511_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11511_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11511_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11511_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11511_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11511_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11511_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11511_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11511_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11511_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11511_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11511_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11511_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11654_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11654_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11654_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11654_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11654_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11654_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11654_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11654_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11654_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11654_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11654_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11654_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11654_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11834_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11834_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11834_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11834_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11834_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11834_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11834_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11834_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11834_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11834_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11834_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11834_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11834_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11844_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11844_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11844_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11844_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11844_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11844_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11844_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11844_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11844_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11875_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11875_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11875_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11875_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11875_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11875_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11875_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11885_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11885_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11885_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11885_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11885_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11885_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11885_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11885_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11885_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11885_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11885_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11885_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11885_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11892_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11892_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11892_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11892_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11892_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11892_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11892_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11892_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11892_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11900_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11900_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11900_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11900_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11900_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11900_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11900_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11900_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11900_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11907_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11907_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11907_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11907_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11907_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11907_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11907_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11907_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11907_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11921_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11921_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11921_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11921_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11921_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11921_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11921_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11921_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11921_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11921_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11921_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11921_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11921_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11928_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11928_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11928_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11928_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11928_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11928_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11928_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11928_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11928_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11928_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11928_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11928_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11928_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11952_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11952_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11952_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11952_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11952_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11952_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11952_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11952_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11952_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "11971_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/11971_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11971_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11971_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11971_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11971_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/11971_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/11971_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11971_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11971_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11971_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11971_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/11971_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12107_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/12107_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12107_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12107_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/12107_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12107_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12107_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12116_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/12116_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12116_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12116_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12116_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12116_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12116_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/12116_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12116_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12116_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12116_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12116_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12116_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12134_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/12134_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12134_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12134_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12134_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12134_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12134_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/12134_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12134_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12134_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12134_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12134_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12134_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12152_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/12152_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12152_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12152_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12152_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/12152_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12152_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12152_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12152_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12153_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/12153_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12153_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12153_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12153_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12153_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12153_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/12153_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12153_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12153_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12153_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12153_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12153_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12545_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/12545_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12545_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12545_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/12545_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12545_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12545_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12546_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/12546_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12546_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12546_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/12546_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12546_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12546_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12680_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/12680_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12680_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12680_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12680_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/12680_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12680_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12680_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12680_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12972_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/12972_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12972_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12972_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12972_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/12972_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12972_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12972_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12972_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12993_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/12993_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12993_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12993_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/12993_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12993_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12993_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "12994_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/12994_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12994_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/12994_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/12994_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12994_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/12994_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "13117_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/13117_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/13117_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/13117_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/13117_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/13117_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/13117_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/13117_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/13117_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/13117_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/13117_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/13117_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/13117_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "13142_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/13142_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/13142_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/13142_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/13142_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/13142_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/13142_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "13144_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/13144_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/13144_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/13144_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/13144_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/13144_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/13144_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/13144_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/13144_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/13144_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/13144_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/13144_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/13144_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "15240_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/15240_Edin_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/15240_Edin_L4_R2.fastq.gz"
+        ]
+    },
+    "15296_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/15296_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/15296_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/15296_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/15296_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "15329_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/15329_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/15329_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/15329_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/15329_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "15468_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/15468_Edin_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/15468_Edin_L2_R2.fastq.gz"
+        ]
+    },
+    "15533_Extr": {
+        "R1": [
+            "../results/02ZIPPED_fqs/15533_Extr_L7_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/15533_Extr_L7_R2.fastq.gz"
+        ]
+    },
+    "15655_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/15655_Edin_L5_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/15655_Edin_L5_R2.fastq.gz"
+        ]
+    },
+    "15768_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/15768_Edin_L5_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/15768_Edin_L5_R2.fastq.gz"
+        ]
+    },
+    "16117_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16117_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/16117_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/16117_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/16117_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "16286_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16286_Edin_L3_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/16286_Edin_L3_R2.fastq.gz"
+        ]
+    },
+    "16483_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16483_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/16483_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/16483_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/16483_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "16488_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16488_Edin_L5_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/16488_Edin_L5_R2.fastq.gz"
+        ]
+    },
+    "16640_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16640_Edin_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/16640_Edin_L4_R2.fastq.gz"
+        ]
+    },
+    "16649_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16649_Edin_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/16649_Edin_L6_R2.fastq.gz"
+        ]
+    },
+    "16810_Extr": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16810_Extr_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/16810_Extr_L6_R2.fastq.gz"
+        ]
+    },
+    "16859_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16859_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/16859_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/16859_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/16859_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "17013_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17013_Edin_L3_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17013_Edin_L3_R2.fastq.gz"
+        ]
+    },
+    "17049_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17049_Edin_L3_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17049_Edin_L3_R2.fastq.gz"
+        ]
+    },
+    "17054_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17054_Edin_L1_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17054_Edin_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17054_Edin_L1_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17054_Edin_L6_R2.fastq.gz"
+        ]
+    },
+    "17072_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17072_Edin_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17072_Edin_L4_R2.fastq.gz"
+        ]
+    },
+    "17081_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17081_Edin_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17081_Edin_L2_R2.fastq.gz"
+        ]
+    },
+    "17087_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17087_Edin_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17087_Edin_L4_R2.fastq.gz"
+        ]
+    },
+    "17111_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17111_Crdf_L1_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17111_Crdf_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17111_Crdf_L1_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17111_Crdf_L2_R2.fastq.gz"
+        ]
+    },
+    "17115_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17115_Edin_L1_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17115_Edin_L1_R2.fastq.gz"
+        ]
+    },
+    "17130_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17130_Edin_L3_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17130_Edin_L3_R2.fastq.gz"
+        ]
+    },
+    "17160_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17160_Edin_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17160_Edin_L2_R2.fastq.gz"
+        ]
+    },
+    "17162_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17162_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17162_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17162_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17162_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "17167_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17167_Edin_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17167_Edin_L4_R2.fastq.gz"
+        ]
+    },
+    "17175_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17175_Edin_L5_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17175_Edin_L5_R2.fastq.gz"
+        ]
+    },
+    "17193_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17193_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17193_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17193_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17193_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17193_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17193_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17193_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17193_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17193_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17193_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17193_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17193_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "17221_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17221_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17221_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17221_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17221_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17221_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17221_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "17229_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17229_Edin_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17229_Edin_L6_R2.fastq.gz"
+        ]
+    },
+    "17264_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17264_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17264_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17264_Crdf_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17264_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17264_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17264_Crdf_L6_R2.fastq.gz"
+        ]
+    },
+    "17333_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17333_Edin_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17333_Edin_L2_R2.fastq.gz"
+        ]
+    },
+    "17369_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17369_Edin_L5_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17369_Edin_L5_R2.fastq.gz"
+        ]
+    },
+    "17372_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17372_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17372_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17372_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17372_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "17475_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17475_Edin_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17475_Edin_L4_R2.fastq.gz"
+        ]
+    },
+    "17486_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17486_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17486_Crdf_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17486_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17486_Crdf_L6_R2.fastq.gz"
+        ]
+    },
+    "17521_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17521_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17521_Crdf_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17521_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17521_Crdf_L4_R2.fastq.gz"
+        ]
+    },
+    "17543_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17543_Edin_L3_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17543_Edin_L3_R2.fastq.gz"
+        ]
+    },
+    "17629_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17629_Edin_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17629_Edin_L2_R2.fastq.gz"
+        ]
+    },
+    "17666_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17666_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17666_Crdf_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17666_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17666_Crdf_L6_R2.fastq.gz"
+        ]
+    },
+    "17671_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17671_Edin_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17671_Edin_L6_R2.fastq.gz"
+        ]
+    },
+    "17701_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17701_Edin_L5_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17701_Edin_L5_R2.fastq.gz"
+        ]
+    },
+    "17753_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17753_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17753_Crdf_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17753_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17753_Crdf_L4_R2.fastq.gz"
+        ]
+    },
+    "17754_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17754_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17754_Crdf_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17754_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17754_Crdf_L4_R2.fastq.gz"
+        ]
+    },
+    "17812_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17812_Edin_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17812_Edin_L6_R2.fastq.gz"
+        ]
+    },
+    "17835_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17835_Edin_L1_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17835_Edin_L1_R2.fastq.gz"
+        ]
+    },
+    "17922_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17922_Edin_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17922_Edin_L4_R2.fastq.gz"
+        ]
+    },
+    "17923_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17923_Edin_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17923_Edin_L6_R2.fastq.gz"
+        ]
+    },
+    "17932_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17932_Crdf_L1_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/17932_Crdf_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17932_Crdf_L1_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/17932_Crdf_L2_R2.fastq.gz"
+        ]
+    },
+    "18015_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18015_Crdf_L1_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/18015_Crdf_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18015_Crdf_L1_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/18015_Crdf_L2_R2.fastq.gz"
+        ]
+    },
+    "18055_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18055_Edin_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18055_Edin_L6_R2.fastq.gz"
+        ]
+    },
+    "18134_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18134_Edin_L7_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18134_Edin_L7_R2.fastq.gz"
+        ]
+    },
+    "18139_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18139_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/18139_Crdf_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18139_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/18139_Crdf_L4_R2.fastq.gz"
+        ]
+    },
+    "18153_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18153_Edin_L1_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/18153_Edin_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18153_Edin_L1_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/18153_Edin_L6_R2.fastq.gz"
+        ]
+    },
+    "18208_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18208_Edin_L7_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18208_Edin_L7_R2.fastq.gz"
+        ]
+    },
+    "18241_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18241_Edin_L5_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18241_Edin_L5_R2.fastq.gz"
+        ]
+    },
+    "18249_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18249_Edin_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18249_Edin_L2_R2.fastq.gz"
+        ]
+    },
+    "18266_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18266_Edin_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18266_Edin_L8_R2.fastq.gz"
+        ]
+    },
+    "18282_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18282_Edin_L5_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18282_Edin_L5_R2.fastq.gz"
+        ]
+    },
+    "18294_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18294_Edin_L7_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18294_Edin_L7_R2.fastq.gz"
+        ]
+    },
+    "18349_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18349_Edin_L5_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18349_Edin_L5_R2.fastq.gz"
+        ]
+    },
+    "18355_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18355_Edin_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18355_Edin_L8_R2.fastq.gz"
+        ]
+    },
+    "18372_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18372_Edin_L7_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18372_Edin_L7_R2.fastq.gz"
+        ]
+    },
+    "18382_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18382_Crdf_L1_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/18382_Crdf_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18382_Crdf_L1_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/18382_Crdf_L2_R2.fastq.gz"
+        ]
+    },
+    "18528_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18528_Crdf_L1_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/18528_Crdf_L2_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18528_Crdf_L1_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/18528_Crdf_L2_R2.fastq.gz"
+        ]
+    },
+    "18529_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18529_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/18529_Crdf_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18529_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/18529_Crdf_L6_R2.fastq.gz"
+        ]
+    },
+    "18540_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18540_Crdf_L3_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/18540_Crdf_L4_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/18540_Crdf_L5_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18540_Crdf_L3_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/18540_Crdf_L4_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/18540_Crdf_L5_R2.fastq.gz"
+        ]
+    },
+    "18559_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18559_Edin_L3_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18559_Edin_L3_R2.fastq.gz"
+        ]
+    },
+    "18596_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18596_Edin_L5_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18596_Edin_L5_R2.fastq.gz"
+        ]
+    },
+    "18611_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18611_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/18611_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18611_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/18611_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "18653_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18653_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/18653_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18653_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/18653_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "18655_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18655_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/18655_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18655_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/18655_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "18666_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18666_Edin_L3_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18666_Edin_L3_R2.fastq.gz"
+        ]
+    },
+    "18687_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18687_Edin_L7_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18687_Edin_L7_R2.fastq.gz"
+        ]
+    },
+    "18694_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18694_Edin_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18694_Edin_L4_R2.fastq.gz"
+        ]
+    },
+    "18856_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18856_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/18856_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18856_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/18856_Crdf_L8_R2.fastq.gz"
+        ]
+    },
+    "18983_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/18983_Edin_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/18983_Edin_L8_R2.fastq.gz"
+        ]
+    },
+    "19031_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/19031_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/19031_Crdf_L6_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/19031_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/19031_Crdf_L6_R2.fastq.gz"
+        ]
+    },
+    "19043_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/19043_Edin_L4_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/19043_Edin_L4_R2.fastq.gz"
+        ]
+    },
+    "19052_Edin": {
+        "R1": [
+            "../results/02ZIPPED_fqs/19052_Edin_L7_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/19052_Edin_L7_R2.fastq.gz"
+        ]
+    },
+    "16428_Extr": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16428_Extr_L5_R1.fastq"
+        ],
+	"R2": [
+            "../results/02ZIPPED_fqs/16428_Extr_L5_R2.fastq"
+        ]
+    },
+    "16548_Extr": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16548_Extr_L7_R1.fastq"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/16548_Extr_L7_R2.fastq"
+        ]
+    },
+    "16826_Extr": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16826_Extr_L8_R1.fastq"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/16826_Extr_L8_R2.fastq"
+        ]
+    },
+    "16840_Extr": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16840_Extr_L7_R1.fastq"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/16840_Extr_L7_R2.fastq"
+        ]
+    },
+    "16929_Extr": {
+        "R1": [
+            "../results/02ZIPPED_fqs/16929_Extr_L8_R1.fastq"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/16929_Extr_L8_R2.fastq"
+        ]
+    },
+    "17053_Extr": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17053_Extr_L1_R1.fastq"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17053_Extr_L1_R2.fastq"
+        ]
+    },
+    "17068_Extr": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17068_Extr_L2_R1.fastq"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17068_Extr_L2_R2.fastq"
+        ]
+    },
+    "17071_Extr": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17071_Extr_L3_R1.fastq"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17071_Extr_L3_R2.fastq"
+        ]
+    },
+   "17109_Extr": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17109_Extr_L4_R1.fastq"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17109_Extr_L4_R2.fastq"
+        ]
+    },
+    "17921_Extr": {
+        "R1": [
+            "../results/02ZIPPED_fqs/17921_Extr_L6_R1.fastq"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/17921_Extr_L6_R2.fastq"
+        ]
+    }
+}

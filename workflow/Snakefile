@@ -15,7 +15,7 @@ include: "rules/fastq_prep.smk"
 import numpy
 import pandas as pd
 import os
-
+import json
 
 # -------  LOAD SAMPLE LIST  ---------
 
@@ -25,12 +25,22 @@ sampleID = sample_df.sampleID
 fastq = sample_df.fastq
 
 
+#FILES = json.load(open(config['SAMPLES_JSON']))
+MERGE_FILES = json.load(open(config['MERGE_FILES_JSON']))
+#print()
+ALL_SAMPLES = sorted(MERGE_FILES.keys())
+ALL_MERGED_SAMPLES = sorted(MERGE_FILES.keys()) 
+print(ALL_MERGED_SAMPLES)
+
+
 # -------------  RULES  --------------
 
 localrules: move_and_rename_fastqs
 
 rule all:
     input:
-#        expand("01RAW_fqs/{sample}", sample = sample_df.sampleID),
-#         expand("02ZIPPED_fqs/{sample}", sample = sample_df.sampleID),
-         expand("03MRGD_fqs/{sampleID}_R2.fastq.gz", sampleID = ALL_MERGED_SAMPLES),
+#        expand("../results/01RAW_fqs/{sample}", sample = sample_df.sampleID),
+         expand("../results/02ZIPPED_fqs/{sample}", sample = sample_df.sampleID),
+         expand("../results/03MRGD_fqs/{sampleID}_R2.fastq.gz", sampleID = ALL_MERGED_SAMPLES),
+         expand("../results/04FASTQC/pre-trimmed/{sampleID}_R2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
+         "../results/05MULTIQC/pre-trimmed/multiQC_log.html"
