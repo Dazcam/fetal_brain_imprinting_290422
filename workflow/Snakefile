@@ -11,6 +11,7 @@ shell.suffix("; exitstat=$?; echo END at $(date); echo exit status was $exitstat
 configfile: "../config/config.yaml"
 
 include: "rules/fastq_prep.smk"
+include: "rules/allele_specific.smk"
 
 import numpy
 import pandas as pd
@@ -30,7 +31,7 @@ MERGE_FILES = json.load(open(config['MERGE_FILES_JSON']))
 #print()
 ALL_SAMPLES = sorted(MERGE_FILES.keys())
 ALL_MERGED_SAMPLES = sorted(MERGE_FILES.keys()) 
-print(ALL_MERGED_SAMPLES)
+#print(ALL_MERGED_SAMPLES)
 
 
 # -------------  RULES  --------------
@@ -45,7 +46,10 @@ rule all:
          expand("../results/04FASTQC/pre-trimmed/{sampleID}_R2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
          "../results/05MULTIQC/pre-trimmed/multiQC_log.html",
          expand("../results/04FASTQC/trimmed_mrg/{sampleID}_val_2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
-#         expand("../results/07HARDTRIM_fqs/{sampleID}_val_2.fq.gz", sampleID = ALL_MERGED_SAMPLES),
-#         expand("../results/07HARDTRIM_fqs/{sampleID}_val_1.noSR.fq.gz", sampleID = ALL_MERGED_SAMPLES),
+#         expand("../results/07HARDTRIM_FQs/{sampleID}_val_2.fq.gz", sampleID = ALL_MERGED_SAMPLES),
+#         expand("../results/07HARDTRIM_FQs/{sampleID}_val_1.noSR.fq.gz", sampleID = ALL_MERGED_SAMPLES),
          expand("../results/08READ_DISTRIBUTION/trimmed/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES),
-         expand("../results/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES)
+         expand("../results/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES),
+         "../results/09STATIC_INDEX/ASElux_static_index.annotation",
+         expand("../results/10VCFs/{sampleID}.chr.vcf", sampleID = ALL_MERGED_SAMPLES),
+         expand("../results/11ASE_MAPPINGS/{sampleID}.ase.txt", sampleID = ALL_MERGED_SAMPLES)

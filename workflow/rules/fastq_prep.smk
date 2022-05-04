@@ -16,7 +16,7 @@ MERGE_FILES = json.load(open(config['MERGE_FILES_JSON']))
 #print()
 ALL_SAMPLES = sorted(MERGE_FILES.keys())
 ALL_MERGED_SAMPLES = sorted(MERGE_FILES.keys())
-print(ALL_MERGED_SAMPLES)
+#print(ALL_MERGED_SAMPLES)
 
 
 rule move_and_rename_fastqs:
@@ -113,8 +113,8 @@ rule trim_fastq:
 rule hard_trim_fastq:
     input:   r1 = "../results/06TRIM_FQs/{sampleID}_val_1.fq.gz", 
              r2 = "../results/06TRIM_FQs/{sampleID}_val_2.fq.gz" 
-    output:  r1 = temp("../results/07HARDTRIM_fqs/{sampleID}_val_1.fq.gz"),
-             r2 = temp("../results/07HARDTRIM_fqs/{sampleID}_val_2.fq.gz")
+    output:  r1 = temp("../results/07HARDTRIM_FQs/{sampleID}_val_1.fq.gz"),
+             r2 = temp("../results/07HARDTRIM_FQs/{sampleID}_val_2.fq.gz")
     log:     "../results/log/07HARDTRIM_fqs/{sampleID}.log"
     params:  crdf = 54, extr = 79, edin = 104 # Co-ords are 0 based
     message: "\nHard trimming {wildcards.sampleID}\n"
@@ -136,11 +136,11 @@ rule hard_trim_fastq:
                 shell("../resources/bbmap/bbduk.sh in1={input.r1} in2={input.r2} out1={output.r1} out2={output.r2} ftr={params.edin} ordered=t 2> {log}")
 
 rule remove_short_reads:
-    input:   r1 = "../results/07HARDTRIM_fqs/{sampleID}_val_1.fq.gz",
-             r2 = "../results/07HARDTRIM_fqs/{sampleID}_val_2.fq.gz"
-    output:  r1 = "../results/07HARDTRIM_fqs/{sampleID}_val_1.noSR.fq.gz",
-             r2 = "../results/07HARDTRIM_fqs/{sampleID}_val_2.noSR.fq.gz"
-    log:     "../results/log/07HARDTRIM_fqs/{sampleID}.noSR.log"
+    input:   r1 = "../results/07HARDTRIM_FQs/{sampleID}_val_1.fq.gz",
+             r2 = "../results/07HARDTRIM_FQs/{sampleID}_val_2.fq.gz"
+    output:  r1 = "../results/07HARDTRIM_FQs/{sampleID}_val_1.noSR.fq.gz",
+             r2 = "../results/07HARDTRIM_FQs/{sampleID}_val_2.noSR.fq.gz"
+    log:     "../results/log/07HARDTRIM_FQs/{sampleID}.noSR.log"
     params:  crdf = 55, extr = 80, edin = 105
     message: "Removing short reads for {wildcards.sampleID}"
     run:
@@ -175,10 +175,10 @@ rule read_length_dist_post_QC_and_trimGalore:
              """
 
 rule get_read_length_dist_post_hard_and_SrtRead_trim:
-    input:   hrd_trm_r1 = "../results/07HARDTRIM_fqs/{sampleID}_val_1.fq.gz",
-             hrd_trm_r2 = "../results/07HARDTRIM_fqs/{sampleID}_val_2.fq.gz",
-             hrd_trm_noSR_r1 = "../results/07HARDTRIM_fqs/{sampleID}_val_1.noSR.fq.gz",
-             hrd_trm_noSR_r2 = "../results/07HARDTRIM_fqs/{sampleID}_val_2.noSR.fq.gz"
+    input:   hrd_trm_r1 = "../results/07HARDTRIM_FQs/{sampleID}_val_1.fq.gz",
+             hrd_trm_r2 = "../results/07HARDTRIM_FQs/{sampleID}_val_2.fq.gz",
+             hrd_trm_noSR_r1 = "../results/07HARDTRIM_FQs/{sampleID}_val_1.noSR.fq.gz",
+             hrd_trm_noSR_r2 = "../results/07HARDTRIM_FQs/{sampleID}_val_2.noSR.fq.gz"
     output:  hrd_trm_r1 = "../results/08READ_DISTRIBUTION/hrd_trm/{sampleID}_R1_readDist.txt",
              hrd_trm_r2 = "../results/08READ_DISTRIBUTION/hrd_trm/{sampleID}_R2_readDist.txt",
              hrd_trm_noSR_r1 = "../results/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}_R1_readDist.txt",

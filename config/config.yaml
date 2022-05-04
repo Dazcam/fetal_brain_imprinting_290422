@@ -1,2 +1,14 @@
 sample_list: '../config/all_samples_nameKey'
 MERGE_FILES_JSON: '../config/samples_merge.json'
+
+REF_GENOME: 'genome.fa' 
+GENE_ANNOT: 'Homo_sapiens.GRCh38.100.chr.gtf'
+
+READ_LENGTH: 105
+
+READ_LENGTH_CRDF: 55
+READ_LENGTH_EDNB: 105
+READ_LENGTH_EXTR: 80 
+
+
+
