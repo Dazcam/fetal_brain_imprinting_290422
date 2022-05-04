@@ -43,4 +43,9 @@ rule all:
          expand("../results/02ZIPPED_fqs/{sample}", sample = sample_df.sampleID),
          expand("../results/03MRGD_fqs/{sampleID}_R2.fastq.gz", sampleID = ALL_MERGED_SAMPLES),
          expand("../results/04FASTQC/pre-trimmed/{sampleID}_R2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
-         "../results/05MULTIQC/pre-trimmed/multiQC_log.html"
+         "../results/05MULTIQC/pre-trimmed/multiQC_log.html",
+         expand("../results/04FASTQC/trimmed_mrg/{sampleID}_val_2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
+#         expand("../results/07HARDTRIM_fqs/{sampleID}_val_2.fq.gz", sampleID = ALL_MERGED_SAMPLES),
+#         expand("../results/07HARDTRIM_fqs/{sampleID}_val_1.noSR.fq.gz", sampleID = ALL_MERGED_SAMPLES),
+         expand("../results/08READ_DISTRIBUTION/trimmed/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES),
+         expand("../results/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES)
