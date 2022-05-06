@@ -5,8 +5,8 @@
 #
 ###############################################################################
 
-shell.prefix("set -eo pipefail; echo BEGIN at $(date); ")
-shell.suffix("; exitstat=$?; echo END at $(date); echo exit status was $exitstat; exit $exitstat")
+#shell.prefix("set -eo pipefail; echo BEGIN at $(date); ")
+#shell.suffix("; exitstat=$?; echo END at $(date); echo exit status was $exitstat; exit $exitstat")
 
 configfile: "../config/config.yaml"
 
@@ -20,11 +20,11 @@ import json
 
 # -------  LOAD SAMPLE LIST  ---------
 
-sample_file = config['sample_list']
+sample_file = config['SAMPLE_LIST']
 sample_df = pd.read_table(sample_file, sep="\t+", header=0)
 sampleID = sample_df.sampleID
 fastq = sample_df.fastq
-
+print(sample_df.sampleID)
 
 #FILES = json.load(open(config['SAMPLES_JSON']))
 MERGE_FILES = json.load(open(config['MERGE_FILES_JSON']))
@@ -41,15 +41,15 @@ localrules: move_and_rename_fastqs
 rule all:
     input:
 #        expand("../results/01RAW_fqs/{sample}", sample = sample_df.sampleID),
-         expand("../results/02ZIPPED_fqs/{sample}", sample = sample_df.sampleID),
-         expand("../results/03MRGD_fqs/{sampleID}_R2.fastq.gz", sampleID = ALL_MERGED_SAMPLES),
-         expand("../results/04FASTQC/pre-trimmed/{sampleID}_R2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
-         "../results/05MULTIQC/pre-trimmed/multiQC_log.html",
-         expand("../results/04FASTQC/trimmed_mrg/{sampleID}_val_2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
-#         expand("../results/07HARDTRIM_FQs/{sampleID}_val_2.fq.gz", sampleID = ALL_MERGED_SAMPLES),
-#         expand("../results/07HARDTRIM_FQs/{sampleID}_val_1.noSR.fq.gz", sampleID = ALL_MERGED_SAMPLES),
-         expand("../results/08READ_DISTRIBUTION/trimmed/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES),
-         expand("../results/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES),
-         "../results/09STATIC_INDEX/ASElux_static_index.annotation",
-         expand("../results/10VCFs/{sampleID}.chr.vcf", sampleID = ALL_MERGED_SAMPLES),
-         expand("../results/11ASE_MAPPINGS/{sampleID}.ase.txt", sampleID = ALL_MERGED_SAMPLES)
+        expand("../results/02ZIPPED_fqs/{sample}", sample = sample_df.sampleID),
+        expand("../results/03MRGD_fqs/{sampleID}_R2.fastq.gz", sampleID = ALL_MERGED_SAMPLES),
+        expand("../results/04FASTQC/pre-trimmed/{sampleID}_R2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
+        "../results/05MULTIQC/pre-trimmed/pre-trimmed.html",
+        expand("../results/04FASTQC/trimmed_mrg/{sampleID}_R2_val_2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
+        expand("../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.fq.gz", sampleID = ALL_MERGED_SAMPLES),
+        expand("../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.noSR.fq.gz", sampleID = ALL_MERGED_SAMPLES),
+        expand("../results/08READ_DISTRIBUTION/trimmed/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES),
+        expand("../results/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES),
+        "../results/09STATIC_INDEX/ASElux_static_index.annotation",
+        expand("../results/10VCFs/{sampleID}.chr.vcf", sampleID = ALL_MERGED_SAMPLES),
+        expand("../results/11ASE_MAPPINGS/{sampleID}.ase.txt", sampleID = ALL_MERGED_SAMPLES)

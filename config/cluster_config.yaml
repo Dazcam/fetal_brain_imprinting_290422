@@ -1,15 +1,13 @@
 __default__:
     num_cores: 1
-    mem_per_core: 5G
+    total_mem: 10G
+    duration: 0-05:00:00
 fastqc:
     num_cores: 1
-    mem_per_core: 8G
+    total_mem: 8G
 build_static_index:
     num_cores: 1
-    mem_per_core: 40G
+    total_mem: 40G
 trim_fastq:
     num_cores: 15 # Doesn't match threads in script see https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md
-    mem_per_core: 2G
-ase_align:
-    num_cores: 1
-    mem_per_core: 10G
+    total_mem: 30G

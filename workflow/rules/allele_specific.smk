@@ -2,7 +2,7 @@ rule build_static_index:
     input:   ref = "../resources/refs/genome_sequence/" + config['REF_GENOME'],
              gtf = "../resources/refs/annotation_files/" + config['GENE_ANNOT']
     output:  "../results/09STATIC_INDEX/ASElux_static_index.annotation"
-    log:     "../results/logs/09STATIC_INDEX/build_static_index.log"
+    log:     "../results/log/09STATIC_INDEX/build_static_index.log"
     params:  outdir = "../results/09STATIC_INDEX/ASElux_static_index"
     shell:       
              """
@@ -21,15 +21,16 @@ rule extract_sample_genotypes:
     shell:
              """
              module load bcftools
+             SAMPLE_NUM=$(echo {wildcards.sampleID} | cut -d '_' -f1)
              bcftools annotate -x INFO,^FORMAT/GT {input} \
-             | bcftools view -Ov -s {wildcards.sampleID} > {output} 2> {log}     
+             | bcftools view -Ov -s $SAMPLE_NUM > {output} 2> {log}     
              """
 
 rule ase_align:
     input:   genotype = "../results/10VCFs/{sampleID}.chr.vcf",
              index = "../results/09STATIC_INDEX/ASElux_static_index.annotation",
-             r1 = "../results/07HARDTRIM_FQs/{sampleID}_val_1.noSR.fq.gz",
-             r2 = "../results/07HARDTRIM_FQs/{sampleID}_val_2.noSR.fq.gz"
+             r1 = "../results/07HARDTRIM_FQs/{sampleID}_R1_val_1.noSR.fq.gz",
+             r2 = "../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.noSR.fq.gz"
     output:  "../results/11ASE_MAPPINGS/{sampleID}.ase.txt"    
     log:     "../results/log/11ASE_MAPPINGS/{sampleID}.ase.log"
     

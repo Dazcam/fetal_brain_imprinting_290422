@@ -5,7 +5,7 @@ import json
 
 # -------  LOAD SAMPLE LIST  ---------
 
-sample_file = config['sample_list']
+sample_file = config['SAMPLE_LIST']
 sample_df = pd.read_table(sample_file, sep="\t+", header=0)
 sampleID = sample_df.sampleID
 fastq = sample_df.fastq
@@ -52,12 +52,12 @@ rule merge_fastqs:
             outdir = "../results//03MRGD_fqs/"
     run:
             if len(input.r1) > 1:
-                print(wildcards.sample, ": has > 1 fastq file per read.\n", {input.r1})
+                print(wildcards.sampleID, ": has > 1 fastq file per read.\n", {input.r1})
                 shell("cat {params.indir}{wildcards.sampleID}*_R1.fastq.gz > {output.r1} 2> {log.r1}"),
                 shell("cat {params.indir}{wildcards.sampleID}*_R2.fastq.gz > {output.r2} 2> {log.r2}")
 
             else:
-                print(wildcards.sample, ": has only 1 fastq file per read.\n", {input.r1})
+                print(wildcards.sampleID, ": has only 1 fastq file per read.\n", {input.r1})
                 shell("mv {params.indir}{wildcards.sampleID}*_R1.fastq.gz {params.outdir}{wildcards.sampleID}_R1.fastq.gz 2> {log.r1}"),
                 shell("mv {params.indir}{wildcards.sampleID}*_R2.fastq.gz {params.outdir}{wildcards.sampleID}_R2.fastq.gz 2> {log.r2}")
 
@@ -79,24 +79,25 @@ rule fastqc_pretrim:
 
 rule multiQC_pretrim:
     input:   expand(rules.fastqc_pretrim.output, sampleID = ALL_MERGED_SAMPLES)
-    output:  "../results/05MULTIQC/pre-trimmed/multiQC_log.html"
+    output:  "../results/05MULTIQC/pre-trimmed/pre-trimmed.html"
     log:     "../results/log/05MULTIQC/pre-trimmed/multiqc.log"
-    params:  indir = "../results/04FASTQC/pre-trimmed", 
-             outfile = "../results/05MULTIQC/pre-trimmed"
+    params:  indir = "../results/04FASTQC/pre-trimmed",
+             outdir = "../results/05MULTIQC/pre-trimmed/",
+             outname = "pre-trimmed"
     message: "multiqc for pre-trimmed fastqc"
     shell:
              """
              module load multiqc
-             multiqc {params.indir} -o {output} -d -f -v -n {params.outfile} 2> {log}
+             multiqc {params.indir} -o {params.outdir} -f -v -n {params.outname} 2> {log}
              """
 
 rule trim_fastq:
     input:   r1 = "../results/03MRGD_fqs/{sampleID}_R1.fastq.gz",
              r2 = "../results/03MRGD_fqs/{sampleID}_R2.fastq.gz"
-    output:  "../results/06TRIM_FQs/{sampleID}_val_1.fq.gz",
-             "../results/06TRIM_FQs/{sampleID}_val_2.fq.gz",
-             "../results/04FASTQC/trimmed_mrg/{sampleID}_val_1_fastqc.zip",
-             "../results/04FASTQC/trimmed_mrg/{sampleID}_val_2_fastqc.zip"
+    output:  "../results/06TRIM_FQs/{sampleID}_R1_val_1.fq.gz",
+             "../results/06TRIM_FQs/{sampleID}_R2_val_2.fq.gz",
+             "../results/04FASTQC/trimmed_mrg/{sampleID}_R1_val_1_fastqc.zip",
+             "../results/04FASTQC/trimmed_mrg/{sampleID}_R2__val_2_fastqc.zip"
     log:     "../results/log/06TRIM_FQs/{sampleID}.log"
     threads: 4
     params:  outdir_trim = "../results/06TRIM_FQs/",
@@ -111,10 +112,10 @@ rule trim_fastq:
              """
 
 rule hard_trim_fastq:
-    input:   r1 = "../results/06TRIM_FQs/{sampleID}_val_1.fq.gz", 
-             r2 = "../results/06TRIM_FQs/{sampleID}_val_2.fq.gz" 
-    output:  r1 = temp("../results/07HARDTRIM_FQs/{sampleID}_val_1.fq.gz"),
-             r2 = temp("../results/07HARDTRIM_FQs/{sampleID}_val_2.fq.gz")
+    input:   r1 = "../results/06TRIM_FQs/{sampleID}_R1_val_1.fq.gz", 
+             r2 = "../results/06TRIM_FQs/{sampleID}_R2_val_2.fq.gz" 
+    output:  r1 = temp("../results/07HARDTRIM_FQs/{sampleID}_R1_val_1.fq.gz"),
+             r2 = temp("../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.fq.gz")
     log:     "../results/log/07HARDTRIM_fqs/{sampleID}.log"
     params:  crdf = 54, extr = 79, edin = 104 # Co-ords are 0 based
     message: "\nHard trimming {wildcards.sampleID}\n"
@@ -136,10 +137,10 @@ rule hard_trim_fastq:
                 shell("../resources/bbmap/bbduk.sh in1={input.r1} in2={input.r2} out1={output.r1} out2={output.r2} ftr={params.edin} ordered=t 2> {log}")
 
 rule remove_short_reads:
-    input:   r1 = "../results/07HARDTRIM_FQs/{sampleID}_val_1.fq.gz",
-             r2 = "../results/07HARDTRIM_FQs/{sampleID}_val_2.fq.gz"
-    output:  r1 = "../results/07HARDTRIM_FQs/{sampleID}_val_1.noSR.fq.gz",
-             r2 = "../results/07HARDTRIM_FQs/{sampleID}_val_2.noSR.fq.gz"
+    input:   r1 = "../results/07HARDTRIM_FQs/{sampleID}_R1_val_1.fq.gz",
+             r2 = "../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.fq.gz"
+    output:  r1 = "../results/07HARDTRIM_FQs/{sampleID}_R1_val_1.noSR.fq.gz",
+             r2 = "../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.noSR.fq.gz"
     log:     "../results/log/07HARDTRIM_FQs/{sampleID}.noSR.log"
     params:  crdf = 55, extr = 80, edin = 105
     message: "Removing short reads for {wildcards.sampleID}"
@@ -160,8 +161,8 @@ rule remove_short_reads:
        	       	 shell("../resources/bbmap/reformat.sh in1={input.r1} in2={input.r2} out1={output.r1} out2={output.r2} minlength={params.edin} 2> {log}")
 
 rule read_length_dist_post_QC_and_trimGalore:
-    input:   trm_r1 = "../results/06TRIM_FQs/{sampleID}_val_1.fq.gz",
-             trm_r2 = "../results/06TRIM_FQs/{sampleID}_val_2.fq.gz",
+    input:   trm_r1 = "../results/06TRIM_FQs/{sampleID}_R1_val_1.fq.gz",
+             trm_r2 = "../results/06TRIM_FQs/{sampleID}_R2_val_2.fq.gz",
     output:  trm_r1 = "../results/08READ_DISTRIBUTION/trimmed/{sampleID}_R1_readDist.txt",
              trm_r2 = "../results/08READ_DISTRIBUTION/trimmed/{sampleID}_R2_readDist.txt",
     log:     trm = "../results/log/08READ_DISTRIBUTION/trimmed/{sampleID}.log",
@@ -175,10 +176,10 @@ rule read_length_dist_post_QC_and_trimGalore:
              """
 
 rule get_read_length_dist_post_hard_and_SrtRead_trim:
-    input:   hrd_trm_r1 = "../results/07HARDTRIM_FQs/{sampleID}_val_1.fq.gz",
-             hrd_trm_r2 = "../results/07HARDTRIM_FQs/{sampleID}_val_2.fq.gz",
-             hrd_trm_noSR_r1 = "../results/07HARDTRIM_FQs/{sampleID}_val_1.noSR.fq.gz",
-             hrd_trm_noSR_r2 = "../results/07HARDTRIM_FQs/{sampleID}_val_2.noSR.fq.gz"
+    input:   hrd_trm_r1 = "../results/07HARDTRIM_FQs/{sampleID}_R1_val_1.fq.gz",
+             hrd_trm_r2 = "../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.fq.gz",
+             hrd_trm_noSR_r1 = "../results/07HARDTRIM_FQs/{sampleID}_R1_val_1.noSR.fq.gz",
+             hrd_trm_noSR_r2 = "../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.noSR.fq.gz"
     output:  hrd_trm_r1 = "../results/08READ_DISTRIBUTION/hrd_trm/{sampleID}_R1_readDist.txt",
              hrd_trm_r2 = "../results/08READ_DISTRIBUTION/hrd_trm/{sampleID}_R2_readDist.txt",
              hrd_trm_noSR_r1 = "../results/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}_R1_readDist.txt",
