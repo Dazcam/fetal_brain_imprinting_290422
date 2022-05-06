@@ -1,6 +1,6 @@
 ## Migration from XXXXXX - 
 
-[fastq_prep.smk](worflow/rules/fastq_prep.smk)
+[fastq_prep.smk](workflow/rules/fastq_prep.smk)
 
 + move_and_rename_fastqs - copy fastq files from neurocluster databank
 + zip_fastqs - standardise format of fastq files (some were zipped and some were not)
@@ -13,7 +13,7 @@
 + read_length_dist_post_QC_and_trimGalore - Assess read lengths of reads in fastq files before and after adapter trimming
 + get_read_length_dist_post_hard_and_SrtRead_trim - Assess read lengths of reads in fastq files after long and short read trimming
 
-[allele_specific.smk](worflow/rules/allele_specific.smk) 
+[allele_specific.smk](workflow/rules/allele_specific.smk) 
 
 + build_static_index - build static index file (required for ASElux)
 + extract_sample_genotypes - extract genotype infromation for each individual donor at all SNPs
