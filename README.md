@@ -1,12 +1,25 @@
 ## Migration from XXXXXX - 
 
-fastq_prep.smk
+### Data processing information
 
-1. move_and_rename_fastqs - copy fastq files from neurocluster databank
-2. zip_fastqs - standardise format of fastq files (some were zipped and some were not)
-3. merge_fastqs - merge fastqs into single files for R1 and R2 (some samples were sequenced over multiple lanes)
-4. 
+[fastq_prep.smk](workflow/rules/fastq_prep.smk)
 
++ move_and_rename_fastqs - copy fastq files from neurocluster databank
++ zip_fastqs - standardise format of fastq files (some were zipped and some were not)
++ merge_fastqs - merge fastqs into single files for R1 and R2 (some samples were sequenced over multiple lanes)
++ fastqc_pretrim - run QC on fastq files
++ multiQC_pretrim - collate fastqc reports
++ trim_fastq - trim adatpers from fastqs and run fastqc on trimmed fastqs
++ hard_trim_fastq - Trim fastq reads that are longer that specified threshold
++ remove_short_reads - Trim fastq reads that are shorter than specified threshold
++ read_length_dist_post_QC_and_trimGalore - Assess read lengths of reads in fastq files before and after adapter trimming
++ get_read_length_dist_post_hard_and_SrtRead_trim - Assess read lengths of reads in fastq files after long and short read trimming
+
+[allele_specific.smk](workflow/rules/allele_specific.smk) 
+
++ build_static_index - build static index file (required for ASElux)
++ extract_sample_genotypes - extract genotype infromation for each individual donor at all SNPs
++ ase_align - run allele specific expression analysis
 
 
 NOTE: In former version of this workflow I generated json files to deal with the complex merge_fastq process
@@ -17,3 +30,20 @@ json generation step into the snakemake workflow. For now the json scripts and d
 
 ISSUES: Discrepency between zip_fastqs and merge_fastqs rule caused by absolute path being in json files and 
 relative path being in snake rules. Jobs appear to work now. 
+
+***
+
+### **BiomaRt method**
+
+For the original list of 228 imprinted genes:
+
+1. Get chromosome, start/stop coordinates for all genes (189 genes left - note some genes had multiple entries after this stage)
+2. Get all rsIDs with MAF >= 0.05 for each gene - (169 genes left)
+    + Only 180 genes processed as some genes were too large for software - I can get the SNPs for these manually
+    + A further 11 genes had no SNPs within that range 
+3. For SNPs MAF >= 0.05 filter those with ASE reads in >= 1 sample - (164 genes left - this step needed to make programming simpler)
+4. For SNPs MAF >= 0.05 filter those with >= 20 ASE reads in >= 10 samples - (103 genes left - note thats 20 reads total across alleles)
+
+Is there a more efficient way to do this? Partiularly for the genome wide analysis??
+
+
