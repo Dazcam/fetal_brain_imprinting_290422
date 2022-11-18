@@ -11,3 +11,6 @@ build_static_index:
 trim_fastq:
     num_cores: 15 # Doesn't match threads in script see https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md
     total_mem: 30G
+ase_align:
+    num_cores: 1
+    total_mem: 60G

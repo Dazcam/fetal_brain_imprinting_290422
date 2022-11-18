@@ -45,8 +45,8 @@ rule ase_align:
                  shell("""
                  
                  module load compiler/gnu/5
-                 PREFIX_r1=$(echo "{input.r1}" | cut -f 1-4 -d '.')
-                 PREFIX_r2=$(echo "{input.r2}" | cut -f 1-4 -d '.')
+                 PREFIX_r1=$(echo "{input.r1}" | cut -f 1-5 -d '.')
+                 PREFIX_r2=$(echo "{input.r2}" | cut -f 1-5 -d '.')
        	     
        	         gunzip -c {input.r1} > ${{PREFIX_r1}}
        	         gunzip -c {input.r2} > ${{PREFIX_r2}}

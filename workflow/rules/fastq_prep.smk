@@ -97,7 +97,7 @@ rule trim_fastq:
     output:  "../results/06TRIM_FQs/{sampleID}_R1_val_1.fq.gz",
              "../results/06TRIM_FQs/{sampleID}_R2_val_2.fq.gz",
              "../results/04FASTQC/trimmed_mrg/{sampleID}_R1_val_1_fastqc.zip",
-             "../results/04FASTQC/trimmed_mrg/{sampleID}_R2__val_2_fastqc.zip"
+             "../results/04FASTQC/trimmed_mrg/{sampleID}_R2_val_2_fastqc.zip"
     log:     "../results/log/06TRIM_FQs/{sampleID}.log"
     threads: 4
     params:  outdir_trim = "../results/06TRIM_FQs/",

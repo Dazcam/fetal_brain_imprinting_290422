@@ -12,6 +12,7 @@ configfile: "../config/config.yaml"
 
 include: "rules/fastq_prep.smk"
 include: "rules/allele_specific.smk"
+include: "rules/annotation.smk"
 
 import numpy
 import pandas as pd
@@ -36,20 +37,21 @@ ALL_MERGED_SAMPLES = sorted(MERGE_FILES.keys())
 
 # -------------  RULES  --------------
 
-localrules: move_and_rename_fastqs
+localrules: move_and_rename_fastqs, map_snps_to_genes
 
 rule all:
     input:
 #        expand("../results/01RAW_fqs/{sample}", sample = sample_df.sampleID),
-        expand("../results/02ZIPPED_fqs/{sample}", sample = sample_df.sampleID),
-        expand("../results/03MRGD_fqs/{sampleID}_R2.fastq.gz", sampleID = ALL_MERGED_SAMPLES),
-        expand("../results/04FASTQC/pre-trimmed/{sampleID}_R2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
-        "../results/05MULTIQC/pre-trimmed/pre-trimmed.html",
-        expand("../results/04FASTQC/trimmed_mrg/{sampleID}_R2_val_2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
-        expand("../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.fq.gz", sampleID = ALL_MERGED_SAMPLES),
-        expand("../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.noSR.fq.gz", sampleID = ALL_MERGED_SAMPLES),
-        expand("../results/08READ_DISTRIBUTION/trimmed/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES),
-        expand("../results/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES),
-        "../results/09STATIC_INDEX/ASElux_static_index.annotation",
-        expand("../results/10VCFs/{sampleID}.chr.vcf", sampleID = ALL_MERGED_SAMPLES),
-        expand("../results/11ASE_MAPPINGS/{sampleID}.ase.txt", sampleID = ALL_MERGED_SAMPLES)
+#        expand("../results/02ZIPPED_fqs/{sample}", sample = sample_df.sampleID),
+#        expand("../results/03MRGD_fqs/{sampleID}_R2.fastq.gz", sampleID = ALL_MERGED_SAMPLES),
+#        expand("../results/04FASTQC/pre-trimmed/{sampleID}_R2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
+#        "../results/05MULTIQC/pre-trimmed/pre-trimmed.html",
+#        expand("../results/04FASTQC/trimmed_mrg/{sampleID}_R2_val_2_fastqc.zip", sampleID = ALL_MERGED_SAMPLES),
+#        expand("../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.fq.gz", sampleID = ALL_MERGED_SAMPLES),
+#        expand("../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.noSR.fq.gz", sampleID = ALL_MERGED_SAMPLES),
+#        expand("../results/08READ_DISTRIBUTION/trimmed/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES),
+#        expand("../results/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES),
+#        "../results/09STATIC_INDEX/ASElux_static_index.annotation",
+#        expand("../results/10VCFs/{sampleID}.chr.vcf", sampleID = ALL_MERGED_SAMPLES),
+#        expand("../results/11ASE_MAPPINGS/{sampleID}.ase.txt", sampleID = ALL_MERGED_SAMPLES),
+        "../results/12SNP2GENES/snps2genes_maf_0.05.log"
