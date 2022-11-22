@@ -37,7 +37,7 @@ ALL_MERGED_SAMPLES = sorted(MERGE_FILES.keys())
 
 # -------------  RULES  --------------
 
-localrules: move_and_rename_fastqs, map_snps_to_genes
+localrules: move_and_rename_fastqs, ase_map_snps_to_genes, ase_cross_ref
 
 rule all:
     input:
@@ -54,4 +54,4 @@ rule all:
 #        "../results/09STATIC_INDEX/ASElux_static_index.annotation",
 #        expand("../results/10VCFs/{sampleID}.chr.vcf", sampleID = ALL_MERGED_SAMPLES),
 #        expand("../results/11ASE_MAPPINGS/{sampleID}.ase.txt", sampleID = ALL_MERGED_SAMPLES),
-        "../results/12SNP2GENES/snps2genes_maf_0.05.log"
+        "../results/13CROSSREF/summary_6_ase_imprinting_genes_summary.txt"
