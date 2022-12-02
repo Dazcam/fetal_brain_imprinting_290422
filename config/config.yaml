@@ -1,5 +1,5 @@
-SAMPLE_LIST: '../config/all_samples_nameKey_test'
-MERGE_FILES_JSON: '../config/samples_merge_test.json'
+SAMPLE_LIST: '../config/all_samples_nameKey'
+MERGE_FILES_JSON: '../config/samples_merge.json'
 
 REF_GENOME: 'genome.fa' 
 GENE_ANNOT: 'Homo_sapiens.GRCh38.100.chr.gtf'

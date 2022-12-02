@@ -53,5 +53,5 @@ rule all:
 #        expand("../results/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}_R2_readDist.txt", sampleID = ALL_MERGED_SAMPLES),
 #        "../results/09STATIC_INDEX/ASElux_static_index.annotation",
 #        expand("../results/10VCFs/{sampleID}.chr.vcf", sampleID = ALL_MERGED_SAMPLES),
-#        expand("../results/11ASE_MAPPINGS/{sampleID}.ase.txt", sampleID = ALL_MERGED_SAMPLES),
-        "../results/13CROSSREF/summary_6_ase_imprinting_genes_summary.txt"
+        expand("../results/11ASE_MAPPINGS/{sampleID}.ase.txt", sampleID = ALL_MERGED_SAMPLES),
+#        "../results/13CROSSREF/summary_6_ase_imprinting_genes_summary.txt"

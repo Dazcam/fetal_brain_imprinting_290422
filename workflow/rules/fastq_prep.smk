@@ -22,7 +22,8 @@ ALL_MERGED_SAMPLES = sorted(MERGE_FILES.keys())
 rule move_and_rename_fastqs:
     input:  fastq = lambda w: sample_df[sample_df.sampleID == w.sample].fastq.tolist()
     output: temp("../results/01RAW_fqs/{sample}")
-    log:    "../results/log/01RAW_fqs/{sample}.log"
+    log:    "../results/00LOG/01RAW_fqs/{sample}.log"
+    priority: 0
     shell:
             "cp {input.fastq} {output} 2> {log}"
 
@@ -30,26 +31,28 @@ rule zip_fastqs:
     input:  "../results/01RAW_fqs/{sample}"
     output: temp("../results/02ZIPPED_fqs/{sample}")
     params: outdir = "../results/02ZIPPED_fqs/"
-    log:    "../results/log/02ZIPPED_fqs/{sample}.log"
+    log:    "../results/00LOG/02ZIPPED_fqs/{sample}.log"
+    priority: 5
     run:
 
-        if wildcards.sample.endswith('.fastq'):
-            shell("""gzip {input} 2> {log}""")
-            shell("""mv {input}.gz {params.outdir} 2> {log}""")
-            shell("""touch {output}""")
-        else:
-            shell("""mv {input} {params.outdir} 2> {log}""")
-            shell("""touch {output}""")
+           if wildcards.sample.endswith('.fastq'):
+               shell("""gzip {input} 2> {log}""")
+               shell("""mv {input}.gz {params.outdir} 2> {log}""")
+               shell("""touch {output}""")
+           else:
+               shell("""mv {input} {params.outdir} 2> {log}""")
+               shell("""touch {output}""")
 
 rule merge_fastqs:
     input:  r1 = lambda wildcards: MERGE_FILES[wildcards.sampleID]['R1'],
             r2 = lambda wildcards: MERGE_FILES[wildcards.sampleID]['R2']
     output: r1 = temp("../results/03MRGD_fqs/{sampleID}_R1.fastq.gz"),
             r2 = temp("../results/03MRGD_fqs/{sampleID}_R2.fastq.gz")
-    log:    r1 = "../results/log/03MRGD_fqs/{sampleID}_R1.log",
-            r2 = "../results/log/03MRGD_fqs/{sampleID}_R2.log"
+    log:    r1 = "../results/00LOG/03MRGD_fqs/{sampleID}_R1.log",
+            r2 = "../results/00LOG/03MRGD_fqs/{sampleID}_R2.log"
     params: indir = "../results/02ZIPPED_fqs/", 
-            outdir = "../results//03MRGD_fqs/"
+            outdir = "../results/03MRGD_fqs/"
+    priority: 10
     run:
             if len(input.r1) > 1:
                 print(wildcards.sampleID, ": has > 1 fastq file per read.\n", {input.r1})
@@ -63,62 +66,66 @@ rule merge_fastqs:
 
 
 rule fastqc_pretrim:
-    # Note: Running both fqc runs for R1 and R2 in one rule, not as efficient as it could be but compromise for now
-    input:   rules.merge_fastqs.output.r1 
-    output:  fastqs = "../results/04FASTQC/pre-trimmed/{sampleID}_R2_fastqc.zip",
-    log:     "../results/log/04FASTQC/pre-trimmed/{sampleID}_fastqc"
-    params:  outdir = "../results/04FASTQC/pre-trimmed/"
-    message: "fastqc {input}"
+    # Note:     Running both fqc runs for R1 and R2 in one rule, not as efficient as it could be but compromise for now
+    input:      rules.merge_fastqs.output.r1 
+    output:     fastqs = "../results/04FASTQC/pre-trimmed/{sampleID}_R2_fastqc.zip",
+    log:        "../results/00LOG/04FASTQC/pre-trimmed/{sampleID}_fastqc"
+    params:     outdir = "../results/04FASTQC/pre-trimmed/"
+    envmodules: "FastQC"
+    message:    "fastqc {input}"
+    priority: 15
     shell:
-             """
-             # fastqc works fine on .gz file as well
-             module load FastQC
-             fastqc -o {params.outdir} -f fastq ../results/03MRGD_fqs/{wildcards.sampleID}_R1.fastq.gz  2> {log}
-             fastqc -o {params.outdir} -f fastq ../results/03MRGD_fqs/{wildcards.sampleID}_R2.fastq.gz  2> {log}
-             """
+                """
+                # fastqc works fine on .gz file as well
+                fastqc -o {params.outdir} -f fastq ../results/03MRGD_fqs/{wildcards.sampleID}_R1.fastq.gz  2> {log}
+                fastqc -o {params.outdir} -f fastq ../results/03MRGD_fqs/{wildcards.sampleID}_R2.fastq.gz  2> {log}
+                """
 
 rule multiQC_pretrim:
-    input:   expand(rules.fastqc_pretrim.output, sampleID = ALL_MERGED_SAMPLES)
-    output:  "../results/05MULTIQC/pre-trimmed/pre-trimmed.html"
-    log:     "../results/log/05MULTIQC/pre-trimmed/multiqc.log"
-    params:  indir = "../results/04FASTQC/pre-trimmed",
-             outdir = "../results/05MULTIQC/pre-trimmed/",
-             outname = "pre-trimmed"
-    message: "multiqc for pre-trimmed fastqc"
+    input:      expand(rules.fastqc_pretrim.output, sampleID = ALL_MERGED_SAMPLES)
+    output:     "../results/05MULTIQC/pre-trimmed/pre-trimmed.html"
+    log:        "../results/00LOG/05MULTIQC/pre-trimmed/multiqc.log"
+    params:     indir = "../results/04FASTQC/pre-trimmed",
+                outdir = "../results/05MULTIQC/pre-trimmed/",
+                outname = "pre-trimmed"
+    envmodules: "multiqc"
+    message:    "multiqc for pre-trimmed fastqc"
+    priority: 20
     shell:
-             """
-             module load multiqc
-             multiqc {params.indir} -o {params.outdir} -f -v -n {params.outname} 2> {log}
-             """
+                """
+                multiqc {params.indir} -o {params.outdir} -f -v -n {params.outname} 2> {log}
+                """
 
 rule trim_fastq:
-    input:   r1 = "../results/03MRGD_fqs/{sampleID}_R1.fastq.gz",
-             r2 = "../results/03MRGD_fqs/{sampleID}_R2.fastq.gz"
-    output:  "../results/06TRIM_FQs/{sampleID}_R1_val_1.fq.gz",
-             "../results/06TRIM_FQs/{sampleID}_R2_val_2.fq.gz",
-             "../results/04FASTQC/trimmed_mrg/{sampleID}_R1_val_1_fastqc.zip",
-             "../results/04FASTQC/trimmed_mrg/{sampleID}_R2_val_2_fastqc.zip"
-    log:     "../results/log/06TRIM_FQs/{sampleID}.log"
-    threads: 4
-    params:  outdir_trim = "../results/06TRIM_FQs/",
-             outdir_trim_fqc = "../results/04FASTQC/trimmed_mrg/"
-    message: "Trim Galore: {input}"
+    input:      r1 = "../results/03MRGD_fqs/{sampleID}_R1.fastq.gz",
+                r2 = "../results/03MRGD_fqs/{sampleID}_R2.fastq.gz"
+    output:     temp("../results/06TRIM_FQs/{sampleID}_R1_val_1.fq.gz"),
+                temp("../results/06TRIM_FQs/{sampleID}_R2_val_2.fq.gz"),
+                "../results/04FASTQC/trimmed_mrg/{sampleID}_R1_val_1_fastqc.zip",
+                "../results/04FASTQC/trimmed_mrg/{sampleID}_R2_val_2_fastqc.zip"
+    log:        "../results/00LOG/06TRIM_FQs/{sampleID}.log"
+    threads:    4
+    params:     outdir_trim = "../results/06TRIM_FQs/",
+                outdir_trim_fqc = "../results/04FASTQC/trimmed_mrg/"
+    envmodules: "trimgalore"
+    message:    "Trim Galore: {input}"
+    priority: 25
     shell:
-             """
-             module load trimgalore
-             trim_galore -e 0.1 -q 20  --paired --basename {wildcards.sampleID} \
-             --illumina --output_dir {params.outdir_trim} -j 4 \
-             --fastqc_args "-o {params.outdir_trim_fqc} -f fastq" {input.r1} {input.r2} 2> {log}
-             """
+                """
+                trim_galore -e 0.1 -q 20  --paired --basename {wildcards.sampleID} \
+                --illumina --output_dir {params.outdir_trim} -j 4 \
+                --fastqc_args "-o {params.outdir_trim_fqc} -f fastq" {input.r1} {input.r2} 2> {log}
+                """
 
 rule hard_trim_fastq:
     input:   r1 = "../results/06TRIM_FQs/{sampleID}_R1_val_1.fq.gz", 
              r2 = "../results/06TRIM_FQs/{sampleID}_R2_val_2.fq.gz" 
     output:  r1 = temp("../results/07HARDTRIM_FQs/{sampleID}_R1_val_1.fq.gz"),
              r2 = temp("../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.fq.gz")
-    log:     "../results/log/07HARDTRIM_fqs/{sampleID}.log"
+    log:     "../results/00LOG/07HARDTRIM_fqs/{sampleID}.log"
     params:  crdf = 54, extr = 79, edin = 104 # Co-ords are 0 based
     message: "\nHard trimming {wildcards.sampleID}\n"
+    priority: 30
     run:
             if "Crdf" in wildcards.sampleID:
                 
@@ -139,11 +146,12 @@ rule hard_trim_fastq:
 rule remove_short_reads:
     input:   r1 = "../results/07HARDTRIM_FQs/{sampleID}_R1_val_1.fq.gz",
              r2 = "../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.fq.gz"
-    output:  r1 = "../results/07HARDTRIM_FQs/{sampleID}_R1_val_1.noSR.fq.gz",
-             r2 = "../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.noSR.fq.gz"
-    log:     "../results/log/07HARDTRIM_FQs/{sampleID}.noSR.log"
+    output:  r1 = temp("../results/07HARDTRIM_FQs/{sampleID}_R1_val_1.noSR.fq.gz"),
+             r2 = temp("../results/07HARDTRIM_FQs/{sampleID}_R2_val_2.noSR.fq.gz")
+    log:     "../results/00LOG/07HARDTRIM_FQs/{sampleID}.noSR.log"
     params:  crdf = 55, extr = 80, edin = 105
     message: "Removing short reads for {wildcards.sampleID}"
+    priority: 35
     run:
              if "Crdf" in wildcards.sampleID:
 
@@ -165,8 +173,9 @@ rule read_length_dist_post_QC_and_trimGalore:
              trm_r2 = "../results/06TRIM_FQs/{sampleID}_R2_val_2.fq.gz",
     output:  trm_r1 = "../results/08READ_DISTRIBUTION/trimmed/{sampleID}_R1_readDist.txt",
              trm_r2 = "../results/08READ_DISTRIBUTION/trimmed/{sampleID}_R2_readDist.txt",
-    log:     trm = "../results/log/08READ_DISTRIBUTION/trimmed/{sampleID}.log",
+    log:     trm = "../results/00LOG/08READ_DISTRIBUTION/trimmed/{sampleID}.log",
     message: "Extracting read distribution for {wildcards.sampleID}"
+    priority: 35
     shell:
              """
              printf "\n--------------------------\nExtracting read dist for: {wildcards.sampleID}_R1\n--------------------------\n\n" 2> {log.trm}
@@ -184,11 +193,11 @@ rule get_read_length_dist_post_hard_and_SrtRead_trim:
              hrd_trm_r2 = "../results/08READ_DISTRIBUTION/hrd_trm/{sampleID}_R2_readDist.txt",
              hrd_trm_noSR_r1 = "../results/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}_R1_readDist.txt",
              hrd_trm_noSR_r2 = "../results/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}_R2_readDist.txt",
-    log:     hrd_trm = "../results/log/08READ_DISTRIBUTION/hrd_trm/{sampleID}.log",
-             hrd_trm_noSR = "../results/log/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}.log"
+    log:     hrd_trm = "../results/00LOG/08READ_DISTRIBUTION/hrd_trm/{sampleID}.log",
+             hrd_trm_noSR = "../results/00LOG/08READ_DISTRIBUTION/hrd_trm_noSR/{sampleID}.log"
 
     message: "Extracting read distribution for {wildcards.sampleID}"
-
+    priority: 40
     run:
              print("\n--------------------------\nExtracting read dist for: {wildcards.sampleID}_R1\n--------------------------\n\n")
              shell("gunzip -c {input.hrd_trm_r1} | awk 'NR%4==2{{print length($0)}}' | sort | uniq -c | sort -nr > {output.hrd_trm_r1} 2> {log.hrd_trm}")
