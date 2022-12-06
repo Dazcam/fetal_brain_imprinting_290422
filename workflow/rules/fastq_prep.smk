@@ -6,7 +6,7 @@ import json
 # -------  LOAD SAMPLE LIST  ---------
 
 sample_file = config['SAMPLE_LIST']
-sample_df = pd.read_table(sample_file, sep="\t+", header=0)
+sample_df = pd.read_table(sample_file, sep="\t+", header=0, engine='python')
 sampleID = sample_df.sampleID
 fastq = sample_df.fastq
 

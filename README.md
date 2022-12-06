@@ -46,4 +46,19 @@ For the original list of 228 imprinted genes:
 
 Is there a more efficient way to do this? Partiularly for the genome wide analysis??
 
+### Running the pipeline to deal with scratch quota limits
 
+The pipeline has to be run in different blocks in oredr to balance the competing requiremnets
+of scratch quota limit which are breeched early on and a huge number of small jobs later on.
+
+During the `fastq_prep.smk`, multiple versions of the fastq files can be generated at each stage. This results in
+the quota limit being breeched and pipeline choking at random points. To resolve this I used the following:
+
++ The snakemake `temp()` function to delete olde versions of fastqs as we moved through the pipeline
++ Lowered the max number of jobs that the pipeline could run on Hawk at any one time from 500 to 50
++ Gave later jobs in the process higher priority than earlier jobs
+
+
+At the later `annotation.smk` step for ASE and SNP cross referencing step, for the genome wide anaysis we need to run 19K x 120 jobs,
+these take ~30-60s and require negligable resources. It is important to reinstate the job limit to 500 jobs to churn through these
+jobs quicker.     

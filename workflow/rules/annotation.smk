@@ -27,14 +27,19 @@ rule ase_map_snps_to_genes_genomewide:
     shell:
             "scripts/imprinting_map_snps_2_genes.sh {wildcards.CHR} {params.OUT_DIR} {params.REF_DIR} &> {log}"
 
-#rule ase_map_snps_to_genes:
-#    input:  genes = "../resources/sheets/Tucci_2019_mmc1.xlsx"
-#           ase = "../results/11ASE_MAPPINGS/{sampleID}.ase.txt"
-#    output: "../results/12SNP2GENES/snps2genes_maf_0.05.log"
-#    params: "../results/12SNP2GENES/"
-#    envmodules: "libgit2/1.1.0"
-#    script:
-#            "../scripts/imprinting_map_snps_2_genes.R"
+rule ase_get_imprinted_gene_list:
+    input:  genes = "../resources/sheets/Tucci_2019_mmc1.xlsx"
+    output: "../results/15GETGENELIST/Tucci_2019_imprinted_genes.txt"
+    params: "../results/15GETGENELIST/"
+    envmodules: "libgit2/1.1.0"
+    script:
+            "../scripts/imprinting_get_imprinted_gene_list.R"
+
+rule ase_get_genomewide_gene_list:
+    input:  expand("../results/14SNP2GENES_GW/chr{CHR}_genes_no_snps.txt", CHR = range(1,23))
+    output: "../results/15GETGENELIST/genomewide_genelist.txt"
+    shell:
+            "ls ../results/14SNP2GENES_GW/genes/ | cut -d_ -f1 > {output}"
 
 rule ase_cross_ref:
     input:  "../results/12SNP2GENES/snps2genes_maf_0.05.log"
