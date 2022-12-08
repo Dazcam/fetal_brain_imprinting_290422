@@ -1,7 +1,7 @@
 __default__:
     num_cores: 1
-    total_mem: 10G
-    duration: 1-00:00:00
+    total_mem: 5G
+    duration: 0-2:00:00
 fastqc:
     num_cores: 1
     total_mem: 8G

@@ -1,6 +1,6 @@
 #--------------------------------------------------------------------------------------
 #
-#    Determine if SNPs are 'consitent with genomic imprinting
+#    Determine if SNPs are consistent with genomic imprinting
 #
 #--------------------------------------------------------------------------------------
 

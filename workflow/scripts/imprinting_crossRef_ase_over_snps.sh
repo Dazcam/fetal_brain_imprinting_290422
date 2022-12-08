@@ -74,7 +74,7 @@ for GENE in `ls ../results/12SNP2GENES/*_snps`; do
 
   for SNP in `find ${OUTDIR}${PREFIX} -type f | xargs wc -l | awk '$1 > 7' | sed '$ d' | awk -v OFS=' ' '{print $2}'`; do
   
-  SNPnoExt=${SNP%%_*}
+  SNPnoExt=${SNP%_*}
   echo ${SNPnoExt}
   
     awk -F "\t" '{ 

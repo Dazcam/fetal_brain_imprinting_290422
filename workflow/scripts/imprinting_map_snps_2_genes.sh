@@ -51,7 +51,7 @@ do
    echo $line > ${OUT_DIR}temp_${CHR}
    GENE=$(echo $line | cut -d' ' -f4)
    echo $GENE
-   bedops --element-of ${OUT_DIR}chr${CHR}_snps_MAF.05.txt ${OUT_DIR}temp_${CHR} > ${OUT_DIR}genes/${GENE}_snps;
+   bedops --element-of ${OUT_DIR}chr${CHR}_snps_MAF.05.txt ${OUT_DIR}temp_${CHR} | uniq > ${OUT_DIR}genes/${GENE}_snps;
 done < ${OUT_DIR}chr${CHR}_genes.txt
 
 rm ${OUT_DIR}temp_${CHR}
@@ -67,16 +67,16 @@ GENES_PROCESSED=$(ls ${OUT_DIR}genes/ | wc -l)
 GENES_NO_SNPS=$(wc -l ${OUT_DIR}genes/* | grep -w 0 | wc -l)
 
 wc -l ${OUT_DIR}genes/* > ${OUT_DIR}chr${CHR}_snp_cnts_per_gene.txt
-wc -l ${OUT_DIR}genes/* | grep -w 0 | cut -d/ -f3 | cut -d_ -f1 > ${OUT_DIR}chr${CHR}_genes_no_snps.txt
+wc -l ${OUT_DIR}genes/* | grep -w 0 | cut -d/ -f5 | cut -d_ -f1 > ${OUT_DIR}chr${CHR}_genes_no_snps.txt
 
 printf '%s\n' '' "----------- Chr${CHR} Report -----------" ''
-printf '%s\n' "Total variants: $VARIANTS" 
-printf '%s\n' "Total variants MAF >= 0.05: $VARIANTS_05" 
-printf '%s\n' "Total genes: $GENES" 
+printf '%s\n' "Total variants in VCF file: $VARIANTS" 
+printf '%s\n' "Total variants in VCF file, MAF >= 0.05: $VARIANTS_05" 
+printf '%s\n' "Total genes in gff3 file: $GENES" 
 printf '%s\n' "Total HGNC genes: $GENES_HGNC" 
 printf '%s\n' "Total genes with no HGNC ID: $GENES_NO_HGNC" 
-printf '%s\n' "Total genes processed: $GENES_PROCESSED" 
-printf '%s\n' "Total genes containing no variants MAF >= 0.05: $GENES_NO_SNPS" ''
+printf '%s\n' "Total genes in output directory: $GENES_PROCESSED" 
+printf '%s\n' "Total genes in output directory containing no variants, MAF >= 0.05: $GENES_NO_SNPS" ''
 printf '%s\n' "------------------------------------" ''
 
 
