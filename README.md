@@ -62,3 +62,8 @@ the quota limit being breeched and pipeline choking at random points. To resolve
 At the later `annotation.smk` step for ASE and SNP cross referencing step, for the genome wide anaysis we need to run 19K x 120 jobs,
 these take ~30-60s and require negligable resources. It is important to reinstate the job limit to 500 jobs to churn through these
 jobs quicker.     
+
+
+### **Ensembl data dump method**
+
++ [GFF3 README](https://ftp.ensembl.org/pub/release-108/gff3/homo_sapiens/README)
