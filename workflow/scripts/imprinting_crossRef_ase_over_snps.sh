@@ -18,6 +18,11 @@
 OUTDIR=$1
 
 ## Get ase values over imprinted gene SNPs  -------------------------------------------
+
+printf "\n|--------------------------------------------|\n"
+printf "Get ase values over imprinted gene SNPs\n"
+printf "|--------------------------------------------|\n\n"
+
 for SNPs_for_GENE in `ls ../results/12SNP2GENES/*_snps`
 do
   
@@ -46,6 +51,11 @@ done
 
 
 ## Create summary files  --------------------------------------------------------------- 
+
+printf "\n|--------------------------------------------|\n"
+printf "Create summary file\n"
+printf "|--------------------------------------------|\n\n"
+
 # Count total genes processed
 echo "Total Genes processed:" $'\t' `ls ../results/12SNP2GENES/*_snps | wc -l` > ${OUTDIR}summary_1_genes_processed.txt
 
@@ -68,6 +78,11 @@ do
 done
 
 # Does each SNP have > 20 reads in any sample?
+
+printf "\n|--------------------------------------------|\n"
+printf "Does each SNP have > 20 reads in any sample?\n"
+printf "|--------------------------------------------|\n\n"
+
 for GENE in `ls ../results/12SNP2GENES/*_snps`; do 
 
   PREFIX="$(basename ${GENE} _snps)"
@@ -91,6 +106,11 @@ done
 
 
 # Of those that have SNP > 20 reads, do at least 10 samples have 20 reads over this SNP?
+
+printf "\n|--------------------------------------------------------------------------------------|\n"
+printf "Of those that have SNP > 20 reads, do at least 10 samples have 20 reads over this SNP?\n"
+printf "|--------------------------------------------------------------------------------------|\n\n"
+
 for GENE in `ls ../results/12SNP2GENES/*_snps`; do 
 
   PREFIX="$(basename ${GENE} _snps)"
@@ -108,6 +128,10 @@ done
 paste ${OUTDIR}summary_2_SNPS_MAF_0.05.txt \
 ${OUTDIR}summary_4_MAF_SNPs_exp_in_samples.txt \
 ${OUTDIR}summary_5_SNPnum_20readsIn10samples.txt > ${OUTDIR}summary_6_ase_imprinting_genes_summary.txt
+
+
+printf "Done."
+
 
 # cut -f2 total_snps_maf_gt.05 | sort |  uniq -c
 # sort snps_expressed | sort |  uniq -c

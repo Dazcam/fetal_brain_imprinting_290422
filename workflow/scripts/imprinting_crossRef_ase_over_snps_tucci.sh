@@ -28,8 +28,12 @@ OUTDIR=$3
 
 
 ## Get ase values over imprinted gene SNPs  -------------------------------------------
-cat ${FILE} | while read GENE 
-do
+
+printf "\n|------------------------------------------------|\n"
+printf "Geting ase values over imprinted gene SNPs ... \n"
+printf "|------------------------------------------------|\n\n"
+
+cat ${FILE} | while read GENE; do
 
   printf "ASE results for: ${GENE}\n\n"
 
@@ -54,6 +58,10 @@ do
 done
 
 ## Create summary files  ---------------------------------------------------------------
+printf "\n|--------------------------------------------|\n"
+printf "Creating summary files ... \n"
+printf "|--------------------------------------------|\n\n"
+
 # Count total genes processed
 echo "Total Genes processed:" $'\t' `ls -l ${OUTDIR} | grep '^d' | wc -l` > ${OUTDIR}summary_1_tucci_genes_processed.txt
 
@@ -74,6 +82,12 @@ cat ${FILE} | while read GENE; do
 done
 
 # Does each SNP have > 20 reads in any sample?
+
+printf "\n|-------------------------------------------------|\n"
+printf "Does each SNP have > 20 reads in any sample?\n"
+printf "|-------------------------------------------------|\n\n"
+
+
 cat ${FILE} | while read GENE; do
 
   for SNP in `find ${OUTDIR}${GENE} -type f | xargs wc -l | awk '$1 > 7' | sed '$ d' | awk -v OFS=' ' '{print $2}'`; do
@@ -95,6 +109,11 @@ done
 
 
 # Of those that have SNP > 20 reads, do at least 10 samples have 20 reads over this SNP?
+
+printf "\n|--------------------------------------------------------------------------------------|\n"
+printf "Of those that have SNP > 20 reads, do at least 10 samples have 20 reads over this SNP?\n"
+printf "|--------------------------------------------------------------------------------------|\n\n"
+
 cat ${FILE} | while read GENE; do
 
  # Total SNPs with 20 reads in 10 samples
@@ -103,7 +122,7 @@ cat ${FILE} | while read GENE; do
 
  # Get list of rsIDs for SNPs with 20 reads in 10 samples
  find ${OUTDIR}${GENE}/*_20plus_reads_in_sample -type f | xargs wc -l | awk '$1 >= 10' |\
- sed '$ d' | awk -v OFS=' ' '{print $2}' | cut -d'/' -f3 | sed 's/_gt20reads//g' >> ${OUTDIR}${GENE}/rsIDs_20readsIn10samples
+ sed '$ d' | awk -v OFS=' ' '{print $2}' | cut -d'/' -f5 | sed 's/_20plus_reads_in_sample//g' >> ${OUTDIR}${GENE}/rsIDs_20readsIn10samples
 
 done
 
@@ -112,6 +131,8 @@ done
 paste ${OUTDIR}summary_2_tucci_SNPS_MAF_0.05.txt \
 ${OUTDIR}summary_4_tucci_MAF_SNPs_exp_in_samples.txt \
 ${OUTDIR}summary_5_tucci_SNPnum_20readsIn10samples.txt > ${OUTDIR}summary_6_tucci_ase_imprinting_genes_summary.txt
+
+printf "Done."
 
 #--------------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------------

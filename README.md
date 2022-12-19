@@ -67,3 +67,52 @@ jobs quicker.
 ### **Ensembl data dump method**
 
 + [GFF3 README](https://ftp.ensembl.org/pub/release-108/gff3/homo_sapiens/README)
++ [GFF3 description](http://gmod.org/wiki/GFF3)
+
+
+1. **move_and_rename_fastqs**
+- Standarise fastq names
+- Move 526 fastq files sequenced across 3 sites Cardiff, Edinburgh, Exeter
+- Due to differing naming conventions used json to populate sample names
+2. **zip_fastqs**
+- Some files were fastqs zipped and some were not. Zipped all.
+3. **merge_fastqs**
+- Merged fastqs that were sequenced over multiple lanes into one file (output: R1 and R2 file for each sample)
+4. **fastqc_pretrim**
+- Initial fastq QC - check for adapters
+5. **multiQC_pretrim**
+- Pool fastqc reports
+6. **trim_fastq**
+- Remove sequencing adapters from fastq files
+7. **hard_trim_fastq**
+- For ASElux reads need to be uniform length
+- Trim RHS of reads to following length: Cardiff, 55; Edinburgh, 105; Exeter, 55
+8. **remove_short_reads**
+- Remove reads which hard a shorter length than the lengths specified above
+9. **read_length_dist_post_QC_and_trimGalore**
+- QC to confirm read lengths distribution pre-hard trim
+10. **get_read_length_dist_post_hard_and_SrtRead_trim**
+- QC to	confirm	read lengths distribution post-hard trim
+11. **build_static_index**
+- Build a static index reference file for ASElux
+12. **extract_sample_genotypes**
+- Extract genotypes for 120 samples
+13. **ase_align**
+- Run ASElux to measure allele specific expression in 120 samples
+14. **ase_get_SNP_refs**
+- Download Ensmebl SNP database file
+- `https://ftp.ensembl.org/pub/release-108/variation/vcf/homo_sapiens/homo_sapiens-chr{CHR}.vcf.gz`
+15. **ase_get_GENE_refs**
+- Download Ensmebl GENE database file
+- `https://ftp.ensembl.org/pub/release-108/gff3/homo_sapiens/Homo_sapiens.GRCh38.108.chromosome.{CHR}.gff3.gz`
+16. **ase_map_snps_to_genes_genomewide**
+- Map SNPs with MAF >= 0.05 to genes in genomewide 
+- Note: gene labels used in column 3 of gff file were `gene` and `ncRNA_gene`
+17. **ase_get_imprinted_gene_list**
+- Generate gene list for is gene imprinted step
+18. **ase_cross_ref**
+- Bottleneck: Cross ref ASE variants for 120 samples with 30K MAF >= 0.05 varaints for ~30K genes
+19. **ase_is_gene_imprinted**
+- Check if gene is consistent with genomic imprinting:
+- At least 90% of reads map to one of the two alleles in 80% of our heterozygotes for each SNP
+
