@@ -6,98 +6,103 @@
 
 ## Method  ----------------------------------------------------------------------------
 
-# 1. Cross ref ASE results with MAF >= 0.05 SNPs for each gene in gene list
+# 1. Cross ref ASE results with MAF >= 0.05 SNPs for each gene in Tucci gene list
 # 2. Summary files:
 #    - Count total genes processed
 #    - Count SNPs with MAF >= 0.05 in each gene?
 #    - Count SNPs with MAF >= 0.05 have gEx values in at least 1 of the 120 samples
 #      and have > 20 reads over SNP in >= 10 samples
 
+# Final summary output
+
+#  Gene
+#  Variants with MAF >= 0.05
+#  Variants with MAF >= 0.05 have gEx values in at least 1 of the 120 samples
+#  No. of variants with >= 20 reads in 10 samples
+
 
 ## Set variables ----------------------------------------------------------------------
-OUTDIR=$1
+FILE=$1
+INDIR=$2
+OUTDIR=$3
+
 
 ## Get ase values over imprinted gene SNPs  -------------------------------------------
 
-printf "\n|--------------------------------------------|\n"
-printf "Get ase values over imprinted gene SNPs\n"
-printf "|--------------------------------------------|\n\n"
+printf "\n|------------------------------------------------|\n"
+printf "  Obtaining ase values over imprinted gene SNPs ... \n"
+printf "|------------------------------------------------|\n\n"
 
-for SNPs_for_GENE in `ls ../results/12SNP2GENES/*_snps`
-do
-  
-  PREFIX="$(basename ${SNPs_for_GENE} _snps)" 
-  echo "ASE results for: "${PREFIX}
-  
-  mkdir -p ${OUTDIR}${PREFIX}
-  
-  for rsID in `cut -f1 ${SNPs_for_GENE}`
-  
+cat ${FILE} | while read GENE; do
+
+  printf "ASE results for: ${GENE}\n\n"
+
+  mkdir -p ${OUTDIR}${GENE}
+
+  for rsID in `cut -f4 ${INDIR}${GENE}_snps`
+
   do
-   
-   echo "ASE results for: "${PREFIX} - ${rsID}
-   
-   printf "\n|-------------------------------------------|\n\n" >> ${OUTDIR}${PREFIX}/${rsID}_ase
-   echo "ASE results for: "${PREFIX} - ${rsID} >> ${OUTDIR}${PREFIX}/${rsID}_ase
-   echo"" >> ${OUTDIR}${PREFIX}/${rsID}_ase
-   grep -wE ${rsID} ../results/11ASE_MAPPINGS/* >> ${OUTDIR}${PREFIX}/${rsID}_ase
-   printf "\n|-------------------------------------------|\n" >> ${OUTDIR}${PREFIX}/${rsID}_ase
+
+   printf "${GENE} - ${rsID}\n"
+
+   printf "\n|-------------------------------------------|\n\n" >> ${OUTDIR}${GENE}/${rsID}_ase
+   echo "ASE results for: "${GENE} - ${rsID} >> ${OUTDIR}${GENE}/${rsID}_ase
+   echo"" >> ${OUTDIR}${GENE}/${rsID}_ase
+   grep -wE ${rsID} ../results/11ASE_MAPPINGS/* >> ${OUTDIR}${GENE}/${rsID}_ase
+   printf "\n|-------------------------------------------|\n" >> ${OUTDIR}${GENE}/${rsID}_ase
 
   done
-  
-  echo "ASE results for: "${PREFIX} " - DONE\n"
 
-done 
+  printf "\nASE results for: ${GENE}  - DONE\n\n"
 
+done
 
-## Create summary files  --------------------------------------------------------------- 
-
+## Create summary files  ---------------------------------------------------------------
 printf "\n|--------------------------------------------|\n"
-printf "Create summary file\n"
+printf "  Creating summary files ... \n"
 printf "|--------------------------------------------|\n\n"
 
 # Count total genes processed
-echo "Total Genes processed:" $'\t' `ls ../results/12SNP2GENES/*_snps | wc -l` > ${OUTDIR}summary_1_genes_processed.txt
+echo "Total Genes processed:" $'\t' `ls -l ${OUTDIR} | grep '^d' | wc -l` > ${OUTDIR}summary_1_genes_processed.txt
 
 # Count SNPs with MAF >= 0.05 in each gene?
-wc -l ../results/12SNP2GENES/*_snps |\
-awk -v OFS=' ' '{print $2 "\t" $1}' |\
-sed '$ d' |\
-cut -d/ -f 4 |\
-sed 's/_snps//g' >> ${OUTDIR}summary_2_SNPS_MAF_0.05.txt
+cat ${FILE} | while read GENE; do
 
-# Count SNPs with MAF >= 0.05 have gEx values in at least 1 of the 120 samples
-for GENE in `ls ../results/12SNP2GENES/*_snps`
-do
-  
-  PREFIX="$(basename ${GENE} _snps)"
-  echo $PREFIX
-  echo $PREFIX >> ${OUTDIR}summary_3_gene_list.txt
-  find ${OUTDIR}${PREFIX} -type f | xargs wc -l | sed '$ d' | awk '$1 > 7' | wc -l >> ${OUTDIR}summary_4_MAF_SNPs_exp_in_samples.txt
- 
+  wc -l ${INDIR}${GENE}_snps | awk -v OFS=' ' '{print $2 "\t" $1}' | cut -d/ -f 5 | sed 's/_snps//g' >> ${OUTDIR}summary_2_SNPS_MAF_0.05.txt
+
 done
 
-# Does each SNP have > 20 reads in any sample?
+# Count SNPs with MAF >= 0.05 have gEx values in at least 1 of the 120 samples
+cat ${FILE} | while read GENE; do
 
-printf "\n|--------------------------------------------|\n"
-printf "Does each SNP have > 20 reads in any sample?\n"
-printf "|--------------------------------------------|\n\n"
+  echo $GENE
+  echo $GENE >> ${OUTDIR}summary_3_gene_list.txt
+  find ${OUTDIR}${GENE} -type f | xargs wc -l | sed '$ d' | awk '$1 > 7' | wc -l >> ${OUTDIR}summary_4_MAF_SNPs_exp_in_samples.txt
 
-for GENE in `ls ../results/12SNP2GENES/*_snps`; do 
+done
 
-  PREFIX="$(basename ${GENE} _snps)"
+# Which variants have > 20 reads in any sample?
 
-  for SNP in `find ${OUTDIR}${PREFIX} -type f | xargs wc -l | awk '$1 > 7' | sed '$ d' | awk -v OFS=' ' '{print $2}'`; do
+printf "\n|-------------------------------------------------|\n"
+printf "  Does each SNP have >= 20 reads in any sample?\n"
+printf "|-------------------------------------------------|\n\n"
+
+printf "The following varinats have >= 20 reads in at least 1 sample:\n\n"
+
+
+cat ${FILE} | while read GENE; do
+
+  for SNP in `find ${OUTDIR}${GENE} -type f | xargs wc -l | awk '$1 > 7' | sed '$ d' | awk -v OFS=' ' '{print $2}'`; do
   
   SNPnoExt=${SNP%_*}
-  echo ${SNPnoExt}
+  echo ${SNPnoExt} | cut -d/ -f4-5 | sed 's/\// - /g'
   
     awk -F "\t" '{ 
     
     if($2+$3 >= 20)
       { print $0 } 
     
-    }' ${SNP} > ${SNPnoExt}_20plus_reads_in_sample
+    }' ${SNP} | cut -d/ -f 4 > ${SNPnoExt}_20plus_reads_in_sample
     
     
   done
@@ -107,60 +112,29 @@ done
 
 # Of those that have SNP > 20 reads, do at least 10 samples have 20 reads over this SNP?
 
-printf "\n|--------------------------------------------------------------------------------------|\n"
-printf "Of those that have SNP > 20 reads, do at least 10 samples have 20 reads over this SNP?\n"
-printf "|--------------------------------------------------------------------------------------|\n\n"
+printf "\n|-----------------------------------------------------------------------------------------|\n"
+printf "  Of those that have SNP >= 20 reads, do at least 10 samples have 20 reads over this SNP?\n"
+printf "|-----------------------------------------------------------------------------------------|\n\n"
 
-for GENE in `ls ../results/12SNP2GENES/*_snps`; do 
+cat ${FILE} | while read GENE; do
 
-  PREFIX="$(basename ${GENE} _snps)"
-  
+ # Total SNPs with 20 reads in 10 samples
+ find ${OUTDIR}${GENE}/*_20plus_reads_in_sample -type f | xargs wc -l | awk '$1 >= 10' |\
+  sed '$ d' | wc -l >> ${OUTDIR}summary_5_SNPnum_20readsIn10samples.txt
 
-      # Total SNPs with 20 reads in 10 samples
-      find ${OUTDIR}${PREFIX}/*_20plus_reads_in_sample -type f | xargs wc -l | awk '$1 >= 10' | sed '$ d' | wc -l >> ${OUTDIR}summary_5_SNPnum_20readsIn10samples.txt
-  
-      # Get list of rsIDs for SNPs with 20 reads in 10 samples
-      find ${OUTDIR}${PREFIX}/*_20plus_reads_in_sample -type f | xargs wc -l | awk '$1 >= 10' | sed '$ d' |\
-      awk -v OFS=' ' '{print $2}' | cut -d'/' -f3 | sed 's/_gt20reads//g' >> ${OUTDIR}${PREFIX}/rsIDs_20readsIn10samples
+ # Get list of rsIDs for SNPs with 20 reads in 10 samples
+ find ${OUTDIR}${GENE}/*_20plus_reads_in_sample -type f | xargs wc -l | awk '$1 >= 10' |\
+ sed '$ d' | awk -v OFS=' ' '{print $2}' | cut -d'/' -f5 | sed 's/_20plus_reads_in_sample//g' >> ${OUTDIR}${GENE}/rsIDs_20readsIn10samples
 
 done
 
+
+# Create general summary
 paste ${OUTDIR}summary_2_SNPS_MAF_0.05.txt \
 ${OUTDIR}summary_4_MAF_SNPs_exp_in_samples.txt \
 ${OUTDIR}summary_5_SNPnum_20readsIn10samples.txt > ${OUTDIR}summary_6_ase_imprinting_genes_summary.txt
 
-
 printf "Done."
 
-
-# cut -f2 total_snps_maf_gt.05 | sort |  uniq -c
-# sort snps_expressed | sort |  uniq -c
-# sort sSNPnum_20readsIn10samples | sort |  uniq -c
-
-
-
-# Quick check of ase scores for SNPs of interest
-
-# Manually 
-
-#GENE=KCNQ1OT1
-
-#while read SNP; do
-
-#cat snps/${GENE}/${SNP}_ase
-
-#done < ${OUTDIR}${GENE}/rsIDs_20readsIn10samples
-
-
-# Systematically
-#while read GENE; do
-
-#  while read SNP; do
-
-#    cat snps/${GENE}/${SNP}_ase
-    
-#  done < ${OUTDIR}${GENE}/rsIDs_20readsIn10samples
-
-#  sleep 10
-  
-#done < ${OUTDIR}summary_3_gene_list
+#--------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------

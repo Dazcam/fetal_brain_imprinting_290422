@@ -47,6 +47,5 @@ rule all:
 #        expand("../results/14SNP2GENES_GW/chr{CHR}_genes_no_snps.txt", CHR = range(1,23)),
 #        "../results/15GETGENELIST/Tucci_2019_imprinted_genes.txt", 
 #        "../results/15GETGENELIST/genomewide_genelist.txt"
-#        "../results/13CROSSREF/summary_6_ase_imprinting_genes_summary.txt"
-#        "../results/15CROSSREF_TUCCI/summary_6_tucci_ase_imprinting_genes_summary.txt"
-        "../results/16ISGENEIMPRINTED_TUCCI/imp_test.txt"
+#        "../results/15CROSSREF/summary_6_ase_imprinting_genes_summary.txt"
+        "../results/16ISGENEIMPRINTED/imp_test.txt"

@@ -1,34 +1,30 @@
 #--------------------------------------------------------------------------------------
 #
-#    Determine if SNPs are consistent with genomic imprinting
+#    Determine if gene are consistent with genomic imprinting
 #
 #--------------------------------------------------------------------------------------
 
 ## Method  ----------------------------------------------------------------------------
+#  Consistent with genomic imprinting is defined as:
 
-# 1. Cross ref ASE results with MAF >= 0.05 SNPs for each gene in gene list
-# 2. Summary files:
-#    - Count total genes processed
-#    - Count SNPs with MAF >= 0.05 in each gene?
-#    - Count SNPs with MAF >= 0.05 have gEx values in at least 1 of the 120 samples
-#      and have > 20 reads over SNP in >= 10 samples
-# 'Consistent with genomic imprinting' is defined as:
-# At least 90% of reads map to one of the two alleles
-# in 80% of our heterozygotes for each SNP
+#  At least 90% of reads map to one of the two alleles
+#  in 80% of our heterozygotes for each SNP
 
 ## Set variables ----------------------------------------------------------------------
-OUTDIR=$1
+INDIR=$1
+OUTDIR=$2
 
 ## Set variables ----------------------------------------------------------------------
-for GENE in `awk -F"\t" '$4>0' ${OUTDIR}summary_6_ase_imprinting_genes_summary.txt | awk '{print $1}'`; do
+for GENE in `awk -F"\t" '$4>0' ${INDIR}summary_6_ase_imprinting_genes_summary.txt | awk '{print $1}'`; do
 
   echo "======================================================"
   printf "${GENE}\n"
   echo "======================================================"
-
+  
+  mkdir ${OUTDIR}${GENE}
   while read SNP; do
 
-  SAMPLES=`grep -c ^rs ${OUTDIR}${GENE}/${SNP}_ase`
+  SAMPLES=`grep -c :rs ${INDIR}${GENE}/${SNP}_ase`
 
   echo "------------------------------------------------------"
   printf "\nChecking if ${SNP} in ${GENE} is Imprinted\n"
@@ -43,15 +39,17 @@ for GENE in `awk -F"\t" '$4>0' ${OUTDIR}summary_6_ase_imprinting_genes_summary.t
   PARTIAL_UPPER=0.6700000
   PARTIAL_LOWER=0.3300000
 
-  grep ^rs ${OUTDIR}${GENE}/${SNP}_ase |\
+  grep :rs ${INDIR}${GENE}/${SNP}_ase |\
   awk -v imp_upper="$IMP_UPPER" -v imp_lower="$IMP_LOWER" -v snp="$SNP" -v gene="$GENE" \
-  -v part_upper="$PARTIAL_UPPER" -v part_lower="$PARTIAL_LOWER" out_dir="$OUTDIR"  '{
+  -v part_upper="$PARTIAL_UPPER" -v part_lower="$PARTIAL_LOWER" '{
+
   if ($4 >= imp_upper || $4 <= imp_lower)
-          print $1"\t"$4"\tImprinted" > "out_dir"gene"/"snp"_imp_test";
+          print $1"\t"$4"\tImprinted" > "../results/16ISGENEIMPRINTED/"gene"/"snp"_imp_test";
   else if ($4 >= part_upper || $4 <= part_lower)
-      print $1"\t"$4"\tPartially imprinted" > "out_dir"gene"/"snp"_imp_test";
+      print $1"\t"$4"\tPartially imprinted" > "../results/16ISGENEIMPRINTED/"gene"/"snp"_imp_test";
   else
-          print $1"\t"$4"\tBiallelic" > "out_dir"gene"/"snp"_imp_test";
+          print $1"\t"$4"\tBiallelic" > "../results/16ISGENEIMPRINTED/"gene"/"snp"_imp_test";
+
   }'
 
   # Count number of individals SNP is imprinted in then
@@ -89,7 +87,7 @@ for GENE in `awk -F"\t" '$4>0' ${OUTDIR}summary_6_ase_imprinting_genes_summary.t
 
   printf "\n------------------------------------------------------\n\n"
 
-  done < ${OUTDIR}${GENE}/rsIDs_20readsIn10samples
+  done < ${INDIR}${GENE}/rsIDs_20readsIn10samples
 
   printf "======================================================\n\n\n\n"
 
@@ -97,3 +95,4 @@ done
 
 #--------------------------------------------------------------------------------------
 #--------------------------------------------------------------------------------------
+

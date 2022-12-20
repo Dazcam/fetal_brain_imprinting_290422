@@ -43,22 +43,22 @@ rule ase_get_imprinted_gene_list:
     script:
             "../scripts/imprinting_get_imprinted_gene_list.R"
 
-rule ase_cross_ref_tucci:
+rule ase_cross_ref:
     input:  "../results/14GETGENELIST/Tucci_2019_genes_in_gw_list.txt"
-    output: "../results/15CROSSREF_TUCCI/summary_6_tucci_ase_imprinting_genes_summary.txt"
+    output: "../results/15CROSSREF/summary_6_ase_imprinting_genes_summary.txt"
     params: indir = "../results/13SNP2GENES_GW/genes/",
-            outdir = "../results/15CROSSREF_TUCCI/"
-    log:    "../results/00LOG/15CROSSREF_TUCCI/ase_cross_ref.log"
+            outdir = "../results/15CROSSREF/"
+    log:    "../results/00LOG/15CROSSREF/ase_cross_ref.log"
     shell:
-            "scripts/imprinting_crossRef_ase_over_snps_tucci.sh {input} {params.indir} {params.outdir}  &> {log}"
+            "scripts/imprinting_crossRef_ase_over_snps.sh {input} {params.indir} {params.outdir}  &> {log}"
 
 
 rule ase_is_gene_imprinted:
-    input:  "../results/15CROSSREF_TUCCI/summary_6_tucci_ase_imprinting_genes_summary.txt"
-    output: "../results/16ISGENEIMPRINTED_TUCCI/imp_test.txt"
-    params: indir = "../results/15CROSSREF_TUCCI/",
-            outdir = "../results/16ISGENEIMPRINTED_TUCCI/"
-    log:    "../results/00LOG/16ISGENEIMPRINTED_TUCCI/ase_is_gene_imprinted.log"
+    input:  "../results/15CROSSREF/summary_6_ase_imprinting_genes_summary.txt"
+    output: "../results/16ISGENEIMPRINTED/imp_test.txt"
+    params: indir = "../results/15CROSSREF/",
+            outdir = "../results/16ISGENEIMPRINTED/"
+    log:    "../results/00LOG/16ISGENEIMPRINTED/ase_is_gene_imprinted.log"
     shell:
-            "scripts/imprinting_is_gene_imprinted_tucci.sh {params.indir} {params.outdir}  &> {log}"
+            "scripts/imprinting_is_gene_imprinted.sh {params.indir} {params.outdir}  &> {log}"
 
