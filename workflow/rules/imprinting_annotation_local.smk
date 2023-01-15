@@ -36,29 +36,18 @@ rule ase_get_genomewide_gene_list:
 rule ase_get_imprinted_gene_list:
     input:  tucci_genes = "../resources/sheets/Tucci_2019_mmc1.xlsx",
             genomewide_genes = "../results/14GETGENELIST/genomewide_genelist.txt"
-    output: "../results/14GETGENELIST/Tucci_2019_genes_in_gw_list.txt"
+    output: "../results/14GETGENELIST/Tucci_2019_genes_in_gw_list.txt",
+            "../results/14GETGENELIST/Tucci_2019_imprinted_genes.txt"
     log:    "../results/00LOG/14GETGENELIST/get_imprinted_gene_list.log"
     params: "../results/14GETGENELIST/"
     envmodules: "libgit2/1.1.0"
     script:
             "../scripts/imprinting_get_imprinted_gene_list.R"
 
-rule ase_cross_ref:
-    input:  "../results/14GETGENELIST/Tucci_2019_genes_in_gw_list.txt"
-    output: "../results/15CROSSREF/summary_6_ase_imprinting_genes_summary.txt"
-    params: indir = "../results/13SNP2GENES_GW/genes/",
-            outdir = "../results/15CROSSREF/"
-    log:    "../results/00LOG/15CROSSREF/ase_cross_ref.log"
+rule ase_rename_tucci_genes:
+    input:  "../results/14GETGENELIST/Tucci_2019_imprinted_genes.txt",
+            "../resources/sheets/tucci_genes_alias.txt"
+    output: "../results/14GETGENELIST/Tucci_2019_imprinted_genes_alias.txt"
+    log:    "../results/00LOG/14GETGENELIST/ase_mv_GW_outfiles_from_server.log"
     shell:
-            "scripts/imprinting_crossRef_ase_over_snps.sh {input} {params.indir} {params.outdir}  &> {log}"
-
-
-rule ase_is_gene_imprinted:
-    input:  "../results/15CROSSREF/summary_6_ase_imprinting_genes_summary.txt"
-    output: "../results/16ISGENEIMPRINTED/imp_test.txt"
-    params: indir = "../results/15CROSSREF/",
-            outdir = "../results/16ISGENEIMPRINTED/"
-    log:    "../results/00LOG/16ISGENEIMPRINTED/ase_is_gene_imprinted.log"
-    shell:
-            "scripts/imprinting_is_gene_imprinted.sh {params.indir} {params.outdir}  &> {log}"
-
+            "scripts/imprinting_rename_tucci_genes.sh {input[0]} {input[1]} {output} &> {log}"

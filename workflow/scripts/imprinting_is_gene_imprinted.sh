@@ -44,11 +44,11 @@ for GENE in `awk -F"\t" '$4>0' ${INDIR}summary_6_ase_imprinting_genes_summary.tx
   -v part_upper="$PARTIAL_UPPER" -v part_lower="$PARTIAL_LOWER" '{
 
   if ($4 >= imp_upper || $4 <= imp_lower)
-          print $1"\t"$4"\tImprinted" > "../results/16ISGENEIMPRINTED/"gene"/"snp"_imp_test";
+          print $1"\t"$4"\tImprinted" > "/localscratch/scw1641/results/16ISGENEIMPRINTED/"gene"/"snp"_imp_test";
   else if ($4 >= part_upper || $4 <= part_lower)
-      print $1"\t"$4"\tPartially imprinted" > "../results/16ISGENEIMPRINTED/"gene"/"snp"_imp_test";
+      print $1"\t"$4"\tPartially imprinted" > "/localscratch/scw1641/results/16ISGENEIMPRINTED/"gene"/"snp"_imp_test";
   else
-          print $1"\t"$4"\tBiallelic" > "../results/16ISGENEIMPRINTED/"gene"/"snp"_imp_test";
+          print $1"\t"$4"\tBiallelic" > "/localscratch/scw1641/results/16ISGENEIMPRINTED/"gene"/"snp"_imp_test";
 
   }'
 

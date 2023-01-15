@@ -10,9 +10,11 @@
 
 configfile: "../config/config.yaml"
 
-include: "rules/fastq_prep.smk"
-include: "rules/allele_specific.smk"
-include: "rules/annotation.smk"
+include: "rules/imprinting_fastq_prep.smk"
+include: "rules/imprinting_allele_specific.smk"
+include: "rules/imprinting_annotation_local.smk"
+include: "rules/imprinting_annotation_gpu.smk"
+include: "rules/imprinting_annotation_tucci.smk"
 
 import numpy
 import pandas as pd
@@ -35,6 +37,10 @@ ALL_MERGED_SAMPLES = sorted(MERGE_FILES.keys())
 #print(ALL_MERGED_SAMPLES)
 
 
+#GENE_DF = pd.read_table("../results/14GETGENELIST/genomewide_genelist.txt")
+#GENE_LIST = list(GENE_DF.iloc[:,0])
+
+
 # -------------  RULES  --------------
 
 localrules: move_and_rename_fastqs, ase_get_SNP_refs, ase_get_GENE_refs
@@ -48,4 +54,7 @@ rule all:
 #        "../results/15GETGENELIST/Tucci_2019_imprinted_genes.txt", 
 #        "../results/15GETGENELIST/genomewide_genelist.txt"
 #        "../results/15CROSSREF/summary_6_ase_imprinting_genes_summary.txt"
-        "../results/16ISGENEIMPRINTED/imp_test.txt"
+#        "/localscratch/scw1641/results/16ISGENEIMPRINTED/imp_test.txt"
+#         expand("../results/15CROSSREF/{GENE}/touch.txt", GENE = GENE_LIST) 
+         "../results/17GW_OUTPUT/summary_6_ase_imprinting_genes_summary.txt",
+         "../results/18TUCCI_ANN/imprinting_gene_list_fishers.html"

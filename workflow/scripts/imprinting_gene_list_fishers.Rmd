@@ -1,0 +1,44 @@
+---
+title: "snRNAseq imprinting Fisher's tests"
+author: "Darren Cameron"
+date: "`r format(Sys.time(), '%d/%m/%y')`"
+output: 
+  html_document:
+    theme: paper
+---
+
+Running Fisher's exact tests on various gene sets
+
+*** 
+
+### Results {.tabset}
+
++ Pvals in red
++ Odds ratios in green
+
+#### Fisher's result
+
+```{r Fishers_heatmap, fig.dim = c(10,5), echo = FALSE, results="asis"}
+drawHeatmap(gom.obj)
+```
+
+***
+
+```{r pval_mat, echo = FALSE, results="asis"}
+knitr::kable(getMatrix(gom.obj, name = "pval"),  caption = "PVAL matrix")
+```
+
+***
+
+```{r odds_mat, echo = FALSE, results="asis"}
+knitr::kable(getMatrix(gom.obj, name = "odds.ratio"),  caption = "Odds ratio matrix")
+```
+
+***
+
+#### Fisher's intersections
+
+```{r Intersections, echo = FALSE}
+str(inter.nl)
+```
+
