@@ -57,6 +57,10 @@
 + ase_is_gene_imprinted
     + Check if gene is consistent with genomic imprinting which is defined as 
     + At least 90% of reads map to one of the two alleles in 80% of our heterozygotes for each SNP
+    
+**Note**: To improve performance the last two steps were run on GPU.
+
+
 
 
 
@@ -78,8 +82,8 @@ The original idea was to measure ASE in our 120 samples in a list of 228 imprint
 
 ### Running the pipeline to deal with scratch quota limits
 
-The pipeline has to be run in different blocks in oredr to balance the competing requiremnets
-of scratch quota limit which are breeched early on and a huge number of small jobs later on.
+The pipeline has to be run in different blocks in order to balance the competing requirements
+of the scratch file / memory quota limits which are breeched early on and a huge number of small jobs later on.
 
 During the `fastq_prep.smk`, multiple versions of the fastq files can be generated at each stage. This results in
 the quota limit being breeched and pipeline choking at random points. To resolve this I used the following:
