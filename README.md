@@ -40,26 +40,26 @@
     + Extract genotype infromation for each individual donor at all SNPs
 + ase_align - run allele specific expression analysis
     + Run ASElux to measure allele specific expression in 120 samples
+    
+[imprinting_annotation_local.smk](workflow/rules/imprinting_annotation_local.smk)
+
++ ase_get_SNP_ref
+    + Download Ensembl SNP database file
++ ase_get_GENE_ref
+    + Download Ensembl GENE database file
++ ase_map_snps_to_genes_genomewide
+    + Map SNPs with MAF >= 0.05 to genes genomewide 
+    + Note: gene labels used in column 3 of gff file were `gene` and `ncRNA_gene`
++ ase_get_imprinted_gene_list
+    + Generate gene list for is gene imprinted step
++ ase_cross_ref
+    + Bottleneck: Cross ref ASE variants for 120 samples with 30K MAF >= 0.05 varaints for ~30K genes
++ ase_is_gene_imprinted
+    + Check if gene is consistent with genomic imprinting which is defined as 
+    + At least 90% of reads map to one of the two alleles in 80% of our heterozygotes for each SNP
 
 
 
-
-14. **ase_get_SNP_refs**
-- Download Ensmebl SNP database file
-- `https://ftp.ensembl.org/pub/release-108/variation/vcf/homo_sapiens/homo_sapiens-chr{CHR}.vcf.gz`
-15. **ase_get_GENE_refs**
-- Download Ensmebl GENE database file
-- `https://ftp.ensembl.org/pub/release-108/gff3/homo_sapiens/Homo_sapiens.GRCh38.108.chromosome.{CHR}.gff3.gz`
-16. **ase_map_snps_to_genes_genomewide**
-- Map SNPs with MAF >= 0.05 to genes in genomewide 
-- Note: gene labels used in column 3 of gff file were `gene` and `ncRNA_gene`
-17. **ase_get_imprinted_gene_list**
-- Generate gene list for is gene imprinted step
-18. **ase_cross_ref**
-- Bottleneck: Cross ref ASE variants for 120 samples with 30K MAF >= 0.05 varaints for ~30K genes
-19. **ase_is_gene_imprinted**
-- Check if gene is consistent with genomic imprinting:
-- At least 90% of reads map to one of the two alleles in 80% of our heterozygotes for each SNP
 
 ***
 
