@@ -127,6 +127,9 @@ jobs quicker.
 
 ***
 
+## Copyright and Licence Information
+
+See the [LICENCE file](LICENCE.md).
 
 
 
