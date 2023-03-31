@@ -1,6 +1,6 @@
 # A genome-wide screen of ASE - V2 - on going
 
-This project was carried out in the Division of Psychological Medicine and Clinical Neurosciences (DPMCN). The paper is [here](https://www.biologicalpsychiatryjournal.com/article/S0006-3223(22)01404-4/fulltext). The workflow follows the the snakemake [distribution and reproducibility](https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html) recommendations. 
+This project was carried out in the Division of Psychological Medicine and Clinical Neurosciences (DPMCN). The workflow follows the the snakemake [distribution and reproducibility](https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html) recommendations. 
 
 ***
 
