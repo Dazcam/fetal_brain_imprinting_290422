@@ -3,6 +3,7 @@
 
 ### **Ensembl data dump method**
 
++ [ASElux paper](ASElux: an ultra-fast and accurate allelic reads counter)
 + [GFF3 README](https://ftp.ensembl.org/pub/release-108/gff3/homo_sapiens/README)
 + [GFF3 description](http://gmod.org/wiki/GFF3)
 
@@ -58,12 +59,7 @@
     + Check if gene is consistent with genomic imprinting which is defined as 
     + At least 90% of reads map to one of the two alleles in 80% of our heterozygotes for each SNP
     
-**Note**: To improve performance the last two steps were run on GPU.
-
-
-
-
-
+**Note**: To improve performance the last two steps were run on GPU. There is code to run it on normal node and GPU node.
 
 ***
 
