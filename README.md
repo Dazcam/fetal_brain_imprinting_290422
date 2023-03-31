@@ -1,4 +1,4 @@
-# A genome-wide screen of ASE 
+# A genome-wide screen of ASE - on going
 
 
 ### **Ensembl data dump method**
