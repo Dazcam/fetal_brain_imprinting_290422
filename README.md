@@ -29,7 +29,7 @@ Papers for public data and software
  
 ***
 
-### **Ensembl data dump method**
+**Ensembl links**
 
 
 + [GFF3 README](https://ftp.ensembl.org/pub/release-108/gff3/homo_sapiens/README)
