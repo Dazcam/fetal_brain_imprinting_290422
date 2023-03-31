@@ -95,9 +95,9 @@ Papers for public data and software
 
 ***
 
-### **BiomaRt method**
+**BiomaRt method**
 
-The original idea was to measure ASE in our 120 samples in a list of 228 imprinted genes. The initial attempt was to use BiomaRt, but there were some issues with time outs. This method would also not be suitable for a genome wide screen.
+The original idea (repo V1) was to measure ASE in our 120 samples in a list of 228 imprinted genes. The initial attempt was to use BiomaRt, but there were some issues with time outs. This method would also not be suitable for a genome wide screen.
 
 1. Get chromosome, start/stop coordinates for all genes (189 genes left - note some genes had multiple entries after this stage)
 2. Get all rsIDs with MAF >= 0.05 for each gene - (169 genes left)
@@ -108,7 +108,7 @@ The original idea was to measure ASE in our 120 samples in a list of 228 imprint
 
 ***
 
-### Running the pipeline to deal with scratch quota limits
+**Running the pipeline to deal with scratch quota limits**
 
 The pipeline has to be run in different blocks in order to balance the competing requirements
 of the scratch file / memory quota limits which are breeched early on and a huge number of small jobs later on.
