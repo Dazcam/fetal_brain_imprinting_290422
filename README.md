@@ -1,11 +1,43 @@
-# A genome-wide screen of ASE - on going
+# A genome-wide screen of ASE - V2 - on going
 
+This project was carried out in the Division of Psychological Medicine and Clinical Neurosciences (DPMCN). The paper is [here](https://www.biologicalpsychiatryjournal.com/article/S0006-3223(22)01404-4/fulltext). The workflow follows the the snakemake [distribution and reproducibility](https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html) recommendations. 
+
+***
+
+A snakemake pipeline to for a geneome wide screen of allele specific expression using genotype and GeX from 120 human brain bulk tissue samples. Utilising the following packages:
+
++ [Snakemake 6.6.1](https://snakemake.readthedocs.io/en/stable/)
++ [Fastqc 0.11.8](https://github.com/s-andrews/FastQC)
++ [Multiqc 1.7](https://multiqc.info)
++ [Trim Galore 0.6.10](https://github.com/FelixKrueger/TrimGalore) 
++ [BBMap 38.84](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbmap-guide/) 
++ [Bcftools 1.16](https://samtools.github.io/bcftools/bcftools.html)
++ [ASElux 1.0.2](https://github.com/abl0719/ASElux)
+
+***
+
+**Data**
+
++ [FastQ files](https://ega-archive.org/search-results.php?query=EGAS00001003214)
+
+***
+
+Papers for public data and software
+
++ [O'Brien et al. (2018)](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1567-1#Sec24)
++ [Miao eat al. (2018)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5905663/) - ASElux
+ 
+***
 
 ### **Ensembl data dump method**
 
-+ [ASElux paper](ASElux: an ultra-fast and accurate allelic reads counter)
+
 + [GFF3 README](https://ftp.ensembl.org/pub/release-108/gff3/homo_sapiens/README)
 + [GFF3 description](http://gmod.org/wiki/GFF3)
+
+****
+
+**Scripts**
 
 [fastq_prep.smk](workflow/rules/fastq_prep.smk)
 
