@@ -1,0 +1,9 @@
+fastq	sampleID
+/gluster/neurocluster/sequencers/foetalRNAseq/170616_K00267_0102_BHJ33NBBXX/Nick_160617/1117_S7_L005_R1_001.fastq.gz	1117_Crdf_L5_R1.fastq.gz
+/gluster/neurocluster/sequencers/foetalRNAseq/170616_K00267_0102_BHJ33NBBXX/Nick_160617/1117_S7_L005_R2_001.fastq.gz	1117_Crdf_L5_R2.fastq.gz
+/gluster/neurocluster/sequencers/foetalRNAseq/170616_K00267_0102_BHJ33NBBXX/Nick_160617/1117_S7_L006_R1_001.fastq.gz	1117_Crdf_L6_R1.fastq.gz
+/gluster/neurocluster/sequencers/foetalRNAseq/170616_K00267_0102_BHJ33NBBXX/Nick_160617/1117_S7_L006_R2_001.fastq.gz	1117_Crdf_L6_R2.fastq.gz
+/gluster/neurocluster/sequencers/foetalRNAseq/170616_K00267_0102_BHJ33NBBXX/Nick_160617/1117_S7_L007_R1_001.fastq.gz	1117_Crdf_L7_R1.fastq.gz
+/gluster/neurocluster/sequencers/foetalRNAseq/170616_K00267_0102_BHJ33NBBXX/Nick_160617/1117_S7_L007_R2_001.fastq.gz	1117_Crdf_L7_R2.fastq.gz
+/gluster/neurocluster/sequencers/foetalRNAseq/170616_K00267_0102_BHJ33NBBXX/Nick_160617/1117_S7_L008_R1_001.fastq.gz	1117_Crdf_L8_R1.fastq.gz
+/gluster/neurocluster/sequencers/foetalRNAseq/170616_K00267_0102_BHJ33NBBXX/Nick_160617/1117_S7_L008_R2_001.fastq.gz	1117_Crdf_L8_R2.fastq.gz

@@ -1,0 +1,17 @@
+{
+    "1117_Crdf": {
+        "R1": [
+            "../results/02ZIPPED_fqs/1117_Crdf_L5_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/1117_Crdf_L6_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/1117_Crdf_L7_R1.fastq.gz",
+            "../results/02ZIPPED_fqs/1117_Crdf_L8_R1.fastq.gz"
+        ],
+        "R2": [
+            "../results/02ZIPPED_fqs/1117_Crdf_L5_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/1117_Crdf_L6_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/1117_Crdf_L7_R2.fastq.gz",
+            "../results/02ZIPPED_fqs/1117_Crdf_L8_R2.fastq.gz"
+        ]
+    }
+
+}
