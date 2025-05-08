@@ -4,7 +4,7 @@ This project was carried out in the Division of Psychological Medicine and Clini
 
 ***
 
-A snakemake pipeline to for a genome wide screen of allele specific expression using genotype and GeX from 120 human brain bulk tissue samples. Utilising the following packages:
+A snakemake pipeline for a genome wide screen of allele specific expression using genotype and GeX from 120 human brain bulk tissue samples. Utilising the following packages:
 
 + [Snakemake 6.6.1](https://snakemake.readthedocs.io/en/stable/)
 + [Fastqc 0.11.8](https://github.com/s-andrews/FastQC)
